@@ -1,0 +1,7 @@
+{
+	"uuid": "3db79f14-1978-411f-8477-f5fb61190bc5",
+	"Name": "Threat Assessment Policy for Simple Password",
+	"Priority":0,
+	"Policy":"        OPTIONAL{ssso:Password_Rotation_Interval rdf:type ssso:Variable. ssso:Minimum_Password_Length rdf:type ssso:Variable. ?loc rdf:type ssso:Location. ?cl rdf:type ssso:Classification_Level. ?eq ssso:hasService ?Service. ?eq ssso:hasContext ?loc. ?loc ssso:hasPolicy ?cl. FILTER (?cl NOT IN (ssso:Classified)). ssso:Password_Rotation_Interval ssso:hasData ?pwdrotint. ssso:Minimum_Password_Length ssso:hasData ?pwdminlen. FILTER (?pwdrotint < '90'^^xsd:int). FILTER (?pwdminlen >= '8'^^xsd:int).}.BIND (IF(BOUND(?pwdrotint), ssso:TL-1, ssso:TL-2) as ?Threat_Level)",
+	"Description": "Minimum_Password_Length>=8 and Password_Rotation_Interval<90 and Classification level is not classified -> TL-1 else TL-2"
+}

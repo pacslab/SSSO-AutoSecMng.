@@ -1,0 +1,94 @@
+{
+    "uuid": "4477c4b4-2402-4110-94ec-98cd1d1bfc5c",
+    "Equipment Model Name": "Smart_Door_Lock Model A",
+    "Equipment Model Version": "3.1",
+    "last_update_timestamp": "2019-08-03T21:23:53.581662+00:00",
+    "Equipment Class": "Smart_Door_Lock",
+    "Service": [
+        {
+            "Name": "Face Authentication Service on Type A Smart Door Lock",
+            "Service Class": "Face_Authentication",
+            "Resource Name": {
+                "RPC": "/faceauth"
+            },
+            "Security Level Provided": "SL-3"
+        },
+        {
+            "Name": "Face Authentication Service on Type A Smart Door Lock",
+            "Service Class": "Iris_Authentication",
+            "Resource Name": {
+                "RPC": "/irisauth"
+            },
+            "Security Level Provided": "SL-4"
+        },
+        {
+            "Name": "Voice Authentication Service on Type A Smart Door Lock",
+            "Service Class": "Voice_Authentication",
+            "Resource Name": {
+                "RPC": "/voiceauth"
+            },
+            "Security Level Provided": "SL-3"
+        },
+        {
+            "Name": "NFC Authentication Service on Type A Smart Door Lock",
+            "Service Class": "NFC_Authentication",
+            "Resource Name": {
+                "RPC": "/nfcauth"
+            },
+            "Trust Level Assessment Policy": "cb965d9e-2887-44c7-a9e9-336c398712a4"
+        },
+        {
+            "Name": "Fingerprint Authentication Service on Type A Smart Door Lock",
+            "Service Class": "Fingerprint_Authentication",
+            "Resource Name": {
+                "RPC": "/fingerprintauth"
+            },
+            "Security Level Provided": "SL-3"
+        },
+        {
+            "Name": "Password Authentication Service on Type A Smart Door Lock",
+            "Service Class": "Password_Authentication",
+            "Resource Name": {
+                "RPC": "/passwdauth"
+            },
+            "Trust Level Assessment Policy": "d8a07c6d-cbbd-4495-b88c-5b1e819e05d2"
+        },
+        {
+            "Name": "Open Door Service on Type A Smart Door Lock",
+            "Service Class": "Open_Door",
+            "Resource Name": {
+                "RPC": "/open_door"
+            },
+            "Security Assessment Policy": "fcfdb350-f613-4dfa-81eb-45f35e4d5fff"
+        },
+        {
+            "Name": "Close Door Service on Type A Smart Door Lock",
+            "Service Class": "Close_Door",
+            "Resource Name": {
+                "RPC": "/close_door"
+            },
+            "Security Assessment Policy": "fcfdb350-f613-4dfa-81eb-45f35e4d5fff"
+        }
+    ],
+    "threat": [
+      {
+            "Name": "Simple Password",
+            "Threat Class": "Simple_Password",
+            "Threat Assessment Policy": "3db79f14-1978-411f-8477-f5fb61190bc5"
+        },
+      {
+            "Name": "Unexpected Door Open",
+            "Threat Class": "Unexpected_Door_Open",
+            "Threat Assessment Policy": "3456b5d8-7276-4ada-a14c-210919f740e8"
+        },
+      {
+            "Name": "Failed_Hardware_Integrity",
+            "Threat Class": "Failed_Hardware_Integrity_Check",
+            "Threat Assessment Policy": "57b64ef9-17b2-404c-82c5-0e43e8019e62"
+        }
+    ],
+    "Description": {
+        "Manufacturer": "Foo Bar Inc.",
+        "Model": "Type A"
+    }
+}

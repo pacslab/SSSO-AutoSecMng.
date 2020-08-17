@@ -1,0 +1,54 @@
+{
+    "uuid": "a2917f42-1669-4b86-880a-00c58fd2d4e0",
+    "Equipment Model Name": "Smart_Card_Reader A",
+    "Equipment Model Version": "3.1",
+    "last_update_timestamp": "2019-08-03T21:23:53.581662+00:00",
+    "Equipment Class": "Smart_Card_Reader",
+    "Service": [
+        {
+            "Name": "Smart Card Authentication Service on Smart_Card_Reader",
+            "Service Class": "Smart_Card_Authentication",
+            "Resource Name": {
+                "RPC": "/smcdcauth"
+            },
+            "Trust Level Assessment Policy": "cb965d9e-2887-44c7-a9e9-336c398712a4"
+        },
+        {
+            "Name": "Open Controlled Window Service on Type A Smart_Card_Reader",
+            "Service Class": "Open_Window",
+            "Resource Name": {
+                "RPC": "/open"
+            },
+            "Security Assessment Policy": "43fa92d2-efb3-4cb5-87b6-080897d5b20f"
+        },
+        {
+            "Name": "Close Controlled Window Service on Type A Smart Smart_Card_Reader",
+            "Service Class": "Close_Window",
+            "Resource Name": {
+                "RPC": "/close"
+            },
+            "Security Assessment Policy": "43fa92d2-efb3-4cb5-87b6-080897d5b20f"
+        }
+    ],
+    "threat": [
+      {
+            "Name": "Electromagnetic_Attack Detected by RF Sensors",
+            "Threat Class": "Electromagnetic_Attack",
+            "Threat Assessment Policy": "dd361e39-62e3-4ebe-a35a-3af19a6caa4b"
+        },
+      {
+            "Name": "Unexpected Window Open",
+            "Threat Class": "Unexpected_Window_Open",
+            "Threat Assessment Policy": "3456b5d8-7276-4ada-a14c-210919f740e8"
+        },
+      {
+            "Name": "Failed_Hardware_Integrity",
+            "Threat Class": "Failed_Hardware_Integrity_Check",
+            "Threat Assessment Policy": "57b64ef9-17b2-404c-82c5-0e43e8019e62"
+        }
+    ],
+    "Description": {
+        "Manufacturer": "Foo Bar Inc.",
+        "Model": "Type A"
+    }
+}

@@ -1,0 +1,72 @@
+{
+    "uuid": "d3bd708e-9981-4106-a91b-544e135eb1d5",
+    "Equipment Model Name": "IoT Gateway Model A",
+    "Equipment Model Version": "6.1",
+    "last_update_timestamp": "2019-08-03T21:23:53.581662+00:00",
+    "Equipment Class": "IoT_Gateway",
+    "Service": [
+        {
+            "Name": "Broadcast_Wi-Fi Service on Type A IoT Gateway",
+            "Service Class": "Broadcast_Wi-Fi",
+            "Resource Name": {
+                "HTTP": "/wifi"
+            },
+            "Required Security Level": "SL-4"
+        },
+        {
+            "Name": "Broadcast_Bluetooth Service on Type A IoT Gateway",
+            "Service Class": "Broadcast_Bluetooth",
+            "Resource Name": {
+                "HTTP": "/bluetooth"
+            },
+            "Required Security Level": "SL-4"
+        },
+        {
+            "Name": "Broadcast_Radio Service on Type A IoT Gateway",
+            "Service Class": "Broadcast_Radio",
+            "Resource Name": {
+                "HTTP": "/rf"
+            },
+            "Required Security Level": "SL-4"
+        },
+        {
+            "Name": "Connect_Internet Service on Type A IoT Gateway",
+            "Service Class": "Connect_Internet",
+            "Resource Name": {
+                "HTTP": "/internet"
+            },
+            "Required Security Level": "SL-4"
+        },
+        {
+            "Name": "Detect_Infrared_Radiation Service on Type A IoT Gateway",
+            "Service Class": "Detect_Infrared_Radiation",
+            "Resource Name": {
+                "HTTP": "/ifr"
+            },
+            "Required Security Level": "SL-2"
+        },
+        {
+            "Name": "Detect_Radio_Frequency Service on Type A IoT Gateway",
+            "Service Class": "Detect_Radio_Frequency",
+            "Resource Name": {
+                "HTTP": "/rfsensor"
+            },
+            "Required Security Level": "SL-2"
+        }
+    ],
+    "threat": [
+        {
+            "Name": "Unauthorized_User",
+            "Threat Class": "Unauthorized_User",
+            "Threat Assessment Policy": "43fbb6fa-45e6-4650-b175-c2a9c9e88167"
+        },
+        {
+            "Name": "Unauthorized_Access",
+            "Threat Class": "Unauthorized_Access",
+            "Threat Assessment Policy": "43fbb6fa-45e6-4650-b175-c2a9c9e88167"
+        }
+    ],
+    "Description": {
+        "Manufacturer": "Foo Bar Inc."
+    }
+}

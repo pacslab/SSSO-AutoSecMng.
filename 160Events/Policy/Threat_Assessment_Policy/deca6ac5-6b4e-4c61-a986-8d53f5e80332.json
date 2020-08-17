@@ -1,0 +1,7 @@
+{
+	"uuid": "deca6ac5-6b4e-4c61-a986-8d53f5e80332",
+	"Name": "Threat Assessment Policy for Certificate on the streaming server",
+	"Priority":0,
+    "Policy": "                OPTIONAL{                ?Equipment ssso:hasService ?eit.                ?eit rdf:type ssso:Encryption_in_Transit.                ?eit ssso:hasContext ssso:Active.                }                BIND (IF(BOUND(?eit), ssso:SL-3, ssso:SL-0) as ?Threat_Level).       ",
+	"Description": "Encryption in Transit Enabled -> TL-3 Otherwise -> TL-0"
+}

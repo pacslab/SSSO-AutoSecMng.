@@ -1,0 +1,7 @@
+{
+	"uuid": "347286fc-4dc5-4bf7-8ed7-fc806370d71a",
+	"Name": "OAuth Authentication",
+	"Priority":0,
+    "Policy": "                OPTIONAL{                ?eq ssso:hasService ?Service.                ?eq ssso:hasService ?eit.                ?eit rdf:type ssso:Encryption_in_Transit.                ?eit ssso:hasContext ssso:Active.                }                BIND (IF(BOUND(?eit), ssso:SL-2, ssso:SL-1) as ?Trust_Level).       ",
+	"Description": "Encryption in Transit Service Enabled -> SL-2 Otherwise -> SL-1"
+}

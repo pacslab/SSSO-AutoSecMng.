@@ -1,0 +1,128 @@
+{
+    "uuid": "72f2cb15-b82d-41e1-8520-c70e28d9415d",
+    "Equipment Model Name": "Smart TV Model A",
+    "Equipment Model Version": "3.1",
+    "last_update_timestamp": "2019-08-03T21:23:53.581662+00:00",
+    "Equipment Class": "Smart_TV",
+    "Service": [
+        {
+            "Name": "Play Audio Service on Type A Smart TV",
+            "Service Class": "Play_Audio",
+            "Resource Name": {
+                "HTTP": "/audioplayer",
+                "RPC": "/audioplayer"
+            },
+            "Required Security Level": "SL-2",
+            "Request Model": "72caf2cf-2430-4536-8e8b-76cefd66e009"
+        },
+        {
+            "Name": "Play Video Service on Type A Smart TV",
+            "Service Class": "Play_Video",
+            "Resource Name": {
+                "HTTP": "/videoplayer",
+                "RPC": "/videoplayer"
+            },
+            "Required Security Level": "SL-2"
+        },
+        {
+            "Name": "Capture Video Service on Type A Smart TV",
+            "Service Class": "Capture_Video",
+            "Resource Name": {
+                "RPC": "/capvid"
+            },
+            "Required Security Level": "SL-4"
+        },
+        {
+            "Name": "Record Audio Service on Type A Smart TV",
+            "Service Class": "Record_Audio",
+            "Resource Name": {
+                "RPC": "/videorecorder"
+            },
+            "Required Security Level": "SL-4"
+        },
+        {
+            "Name": "Face Authentication Service on Type A Smart TV",
+            "Service Class": "Face_Authentication",
+            "Resource Name": {
+                "RPC": "/faceauth"
+            },
+            "Security Level Provided": "SL-3"
+        },
+        {
+            "Name": "Detect Motion Service on Type A Smart TV",
+            "Service Class": "Detect_Motion",
+            "Resource Name": {
+                "HTTP": "/sensor/motion"
+            },
+            "Required Security Level": "SL-2"
+        },
+        {
+            "Name": "Detect Occupancy Service on Type A Smart TV",
+            "Service Class": "Detect_Occupancy",
+            "Resource Name": {
+                "HTTP": "/sensor/occupancy"
+            },
+            "Required Security Level": "SL-2"
+        },
+        {
+            "Name": "Detect Face Service on Type A Smart TV",
+            "Service Class": "Detect_Face",
+            "Resource Name": {
+                "RPC": "/sensor/face"
+            },
+            "Required Security Level": "SL-4"
+        },
+        {
+            "Name": "Share Screen Service on Type A Smart TV",
+            "Service Class": "Share_Screen",
+            "Resource Name": {
+                "RPC": "/screenshare"
+            },
+            "Required Security Level": "SL-4"
+        },
+        {
+            "Name": "Take screenshot Service on Type A Smart TV",
+            "Service Class": "Take_Screenshot",
+            "Resource Name": {
+                "RPC": "/screenshot"
+            },
+            "Required Security Level": "SL-4"
+        },
+        {
+            "Name": "Video Call Service on Type A Smart TV",
+            "Service Class": "Video_Call",
+            "Resource Name": {
+                "RPC": "/vdc"
+            },
+            "Required Security Level": "SL-4"
+        },
+        {
+            "Name": "Call Service on Type A Smart TV",
+            "Service Class": "Call",
+            "Resource Name": {
+                "RPC": "/call"
+            },
+            "Required Security Level": "SL-4"
+        },
+        {
+            "Name": "Detect Infrared Radiation",
+            "Service Class": "Detect_Infrared_Radiation",
+            "Resource Name": {
+                "HTTP": "/inf"
+            },
+            "Required Security Level": "SL-1"
+        }
+    ],
+    "threat": [
+        {
+            "Name": "Failed_Hardware_Integrity_Check",
+            "Threat Class": "Failed_Hardware_Integrity_Check",
+            "Threat Assessment Policy": "57b64ef9-17b2-404c-82c5-0e43e8019e62"
+        }
+    ],
+    "Description": {
+        "Manufacturer": "Foo Bar Inc.",
+        "size": "90",
+        "Resolution": "3840x2160"
+    }
+}

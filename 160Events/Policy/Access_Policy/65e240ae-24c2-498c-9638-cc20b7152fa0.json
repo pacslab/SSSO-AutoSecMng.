@@ -1,0 +1,7 @@
+{
+	"uuid": "65e240ae-24c2-498c-9638-cc20b7152fa0",
+	"Name": "Emergency System Access Policy",
+	"Priority":100,
+	"Policy":"?sl rdf:type ssso:Security_Level.?User ssso:hasPolicy ?sl.FILTER (?sl IN (ssso:SL-1, ssso:SL-2, ssso:SL-3, ssso:SL-4)).?User ssso:hasContext ssso:Emergency_System.",
+	"Description": "Only Devices/Users in Emergency System Group can access."
+}

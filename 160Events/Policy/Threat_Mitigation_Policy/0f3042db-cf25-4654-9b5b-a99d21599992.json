@@ -1,0 +1,7 @@
+{
+	"uuid": "0f3042db-cf25-4654-9b5b-a99d21599992",
+	"Name": "Threat Mitigation Policy for Unexpected Privilege Escalation",
+	"Priority":0,
+    "Policy": "                    ?Equipment ssso:hasService ?svc.                    ?svc rdf:type ssso:Share_Data.                    BIND (?svc AS ?Disable).                    BIND (ssso:TL-1 AS ?Threat_Level).",
+	"Description": "Disable share data service on the device, Mitigated Threat Level is TL-1 "
+}

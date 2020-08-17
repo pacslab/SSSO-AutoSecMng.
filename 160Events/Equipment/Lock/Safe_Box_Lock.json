@@ -1,0 +1,62 @@
+{
+    "uuid": "85041d33-9bac-4e82-aac5-ea7af5cd7871",
+    "Equipment Model Name": "Safe_Box_Lock Model A",
+    "Equipment Model Version": "2.1",
+    "last_update_timestamp": "2019-08-03T21:23:53.581662+00:00",
+    "Equipment Class": "Safe_Box_Lock",
+    "Service": [
+        {
+            "Name": "Fingerprint Authentication Service on Type A Safe_Box_Lock",
+            "Service Class": "Fingerprint_Authentication",
+            "Resource Name": {
+                "RPC": "/fingerprintauth"
+            },
+            "Security Level Provided": "SL-3"
+        },
+        {
+            "Name": "Password Authentication Service on Type A Safe_Box_Lock",
+            "Service Class": "Password_Authentication",
+            "Resource Name": {
+                "RPC": "/passwdauth"
+            },
+            "Security Level Provided": "SL-2"
+        },
+        {
+            "Name": "Open Door Service on Type A Safe_Box_Lock",
+            "Service Class": "Open_Door",
+            "Resource Name": {
+                "RPC": "/open_door"
+            },
+            "Required Security Level": "SL-4"
+        },
+        {
+            "Name": "Close_Door Service on Type A Safe_Box_Lock",
+            "Service Class": "Close_Door",
+            "Resource Name": {
+                "RPC": "/close_door"
+            },
+            "Required Security Level": "SL-4"
+        }
+    ],
+    "threat": [
+      {
+            "Name": "Brute Force Attack by Password Hacking",
+            "Threat Class": "Brute_Force_Attack",
+            "Threat Assessment Policy": "43fbb6fa-45e6-4650-b175-c2a9c9e88167"
+      },
+      {
+            "Name": "Unexpected Door Open",
+            "Threat Class": "Unexpected_Door_Open",
+            "Threat Level": "TL-4"
+        },
+      {
+            "Name": "Failed_Hardware_Integrity",
+            "Threat Class": "Failed_Hardware_Integrity_Check",
+            "Threat Level": "TL-4"
+        }
+    ],
+    "Description": {
+        "Manufacturer": "Foo Bar Inc.",
+        "Model": "Type A"
+    }
+}

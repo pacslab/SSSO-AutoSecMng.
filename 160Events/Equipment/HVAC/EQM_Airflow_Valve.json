@@ -1,0 +1,31 @@
+{
+    "uuid": "28300489-5019-4866-8892-1e7d9183d608",
+    "Equipment Model Name": "Airflow Valve Model A",
+    "Equipment Model Version": "0.1",
+    "last_update_timestamp": "2019-08-03T21:23:53.581662+00:00",
+    "Equipment Class": "Airflow_Valve",
+    "Service": [
+        {
+            "Name": "Airflow setpoint control",
+            "Service Class": "Airflow_Setpoint_Control",
+            "Resource Name": {
+                "RPC": "/airflow"
+            },
+            "Access Policy": "e669ac1d-7337-4107-8422-1e980d4a953d"
+        },
+        {
+            "Name": "Measure wind speed by the sensor",
+            "Service Class": "Measure_Wind_Speed",
+            "Resource Name": {
+                "RPC": "/windspeed"
+            },
+            "Access Policy": "ca067e92-2dbf-4841-8561-fefe39b71cc9"
+        }
+    ],
+    "threat": [
+    ],
+    "Description": {
+        "Manufacturer": "Foo Bar Inc.",
+        "Model": "Type A"
+    }
+}

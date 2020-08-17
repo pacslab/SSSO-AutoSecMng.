@@ -1,0 +1,7 @@
+{
+	"uuid": "c6338919-406d-46b5-936b-c4a4573afea1",
+	"Name": "File Server Password Authentication",
+	"Priority":0,
+    "Policy": "                OPTIONAL{                ?eq ssso:hasService ?Service.                ?eq ssso:hasService ?eit.                ?eit rdf:type ssso:Encryption_in_Transit.                ?eit ssso:hasContext ssso:Active.                }                BIND (IF(BOUND(?eit), ssso:SL-1, ssso:SL-0) as ?Trust_Level).       ",
+	"Description": "Encryption in Transit Service Enabled -> SL-1 Otherwise -> SL-0"
+}

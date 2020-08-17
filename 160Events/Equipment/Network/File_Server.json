@@ -1,0 +1,103 @@
+{
+    "uuid": "40ff1d86-f04d-4b4f-a161-e84ffb52e4cc",
+    "Equipment Model Name": "File Server Model A",
+    "Equipment Model Version": "4.1",
+    "last_update_timestamp": "2019-08-03T21:23:53.581662+00:00",
+    "Equipment Class": "File_Server",
+    "Service": [
+        {
+            "Name": "Share Data Service on Type A File Server",
+            "Service Class": "Share_Data",
+            "Resource Name": {
+                "HTTP": "/sharedata"
+            },
+            "Required Security Level": "SL-4"
+        },
+        {
+            "Name": "Store Data Service on Type A File Server",
+            "Service Class": "Store_Data",
+            "Resource Name": {
+                "HTTP": "/storedata"
+            },
+            "Required Security Level": "SL-2"
+        },
+        {
+            "Name": "Encryption at Rest Service on Type A File Server",
+            "Service Class": "Encryption_at_Rest",
+            "Resource Name": {
+                "HTTP": "/ecrprest"
+            },
+            "Required Security Level": "SL-0"
+        },
+        {
+            "Name": "Encryption in Transit Service on Type A File Server",
+            "Service Class": "Encryption_in_Transit",
+            "Resource Name": {
+                "HTTP": "/ecrptrst"
+            },
+            "Required Security Level": "SL-0"
+        },
+        {
+            "Name": "Detect Data Integrity Service on Type A File Server",
+            "Service Class": "Detect_Data_Integrity",
+            "Resource Name": {
+                "HTTP": "/datainte"
+            },
+            "Access Policy": "801cd727-18d3-4256-af9c-2e8c6ad77e4c"
+        },
+        {
+            "Name": "Token Authentication Service on Type A File Server",
+            "Service Class": "Token_Authentication",
+            "Resource Name": {
+                "HTTP": "/token"
+            },
+            "Trust Level Assessment Policy": "b0e3c089-3db2-48f1-857e-ba7157ae8335"
+        },
+        {
+            "Name": "OAuth Authentication Service on Type A File Server",
+            "Service Class": "OAuth_Authentication",
+            "Resource Name": {
+                "HTTP": "/oauth"
+            },
+            "Trust Level Assessment Policy": "347286fc-4dc5-4bf7-8ed7-fc806370d71a"
+        },
+        {
+            "Name": "Password Authentication Service on File Server",
+            "Service Class": "Password_Authentication",
+            "Resource Name": {
+                "RPC": "/passwdauth"
+            },
+            "Trust Level Assessment Policy": "c6338919-406d-46b5-936b-c4a4573afea1"
+        }
+    ],
+    "threat": [
+        {
+            "Name": "Unrecognized_File",
+            "Threat Class": "Unrecognized_File",
+            "Threat Mitigation Policy": "68b4952d-1109-4e8f-b14f-0994e87c2d7d"
+        },
+        {
+            "Name": "Unexpected_Privilege_Escalation",
+            "Threat Class": "Unexpected_Privilege_Escalation",
+            "Threat Mitigation Policy": "0f3042db-cf25-4654-9b5b-a99d21599992"
+        },
+        {
+            "Name": "Unauthorized_Access",
+            "Threat Class": "Unauthorized_Access",
+            "Threat Mitigation Policy": "0f3042db-cf25-4654-9b5b-a99d21599992"
+        },
+        {
+            "Name": "DDOS Attack",
+            "Threat Class": "DDoS_Attack",
+            "Threat Level": "TL-2"
+        },
+        {
+            "Name": "Active_Malware",
+            "Threat Class": "Active_Malware",
+            "Threat Mitigation Policy": "26f29b73-b3b2-4678-be1a-8082dd67b542"
+        }
+    ],
+    "Description": {
+        "Manufacturer": "Foo Bar Inc."
+    }
+}

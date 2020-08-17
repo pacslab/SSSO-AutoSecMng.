@@ -1,0 +1,7 @@
+{
+	"uuid": "3456b5d8-7276-4ada-a14c-210919f740e8",
+	"Name": "Threat Assessment Policy for Unexpected Door/Window Open",
+	"Priority":0,
+    "Policy": "                OPTIONAL{                    ?loc rdf:type ssso:Location.                    ?Equipment ssso:hasContext ?loc.                    ?loc ssso:hasPolicy ssso:Classified.                    BIND (?loc AS ?con1).                }                OPTIONAL{                    ?Equipment ssso:hasContext ?loc.                    ?loc rdf:type ssso:Location.                    ?loc ssso:hasPolicy ssso:Normal.                    BIND (?loc AS ?con2).                }                OPTIONAL{                    ?Equipment ssso:hasContext ?loc.                    ?loc rdf:type ssso:Location.                    ?loc ssso:hasPolicy ssso:Public.                    BIND (?loc AS ?con3).                }                BIND (COALESCE(IF(BOUND(?con1), ssso:TL-4, 0/0),IF(BOUND(?con2), ssso:TL-2, 0/0), IF(BOUND(?con3), ssso:TL-0, 0/0),ssso:TL-4) AS ?Threat_Level)",
+	"Description": "If Classified -> TL-4, if Normal -> TL-2, if Public -> TL-0, otherwise TL-4"
+}

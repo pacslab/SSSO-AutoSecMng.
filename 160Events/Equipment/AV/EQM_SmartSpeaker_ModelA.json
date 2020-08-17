@@ -1,0 +1,61 @@
+{
+    "uuid": "d285e4bb-e2bb-4a05-a4fb-bdaeb2a29780",
+    "Equipment Model Name": "Smart Speaker Model A",
+    "Equipment Model Version": "0.1",
+    "last_update_timestamp": "2019-08-03T21:23:53.581662+00:00",
+    "Equipment Class": "Smart_Speaker",
+    "Service": [
+        {
+            "Name": "Play Audio Service on Type A Smart Speaker",
+            "Service Class": "Play_Audio",
+            "Resource Name": {
+                "RPC": "/audioplayer"
+            },
+            "Required Security Level": "SL-2",
+            "Request Model": "72caf2cf-2430-4536-8e8b-76cefd66e009"
+        },
+        {
+            "Name": "NFC Authentication Service on Type A Smart Speaker",
+            "Service Class": "NFC_Authentication",
+            "Resource Name": {
+                "RPC": "/nfcauth"
+            },
+            "Trust Level Assessment Policy": "cb965d9e-2887-44c7-a9e9-336c398712a4"
+        },
+        {
+            "Name": "Voice Authentication Service on Type A Smart Speaker",
+            "Service Class": "Voice_Authentication",
+            "Resource Name": {
+                "RPC": "/voiceauth"
+            },
+            "Security Level Provided": "SL-3"
+        },
+        {
+            "Name": "Detect Sound Service on Type A Smart Speaker",
+            "Service Class": "Detect_Sound",
+            "Resource Name": {
+                "MQTT": "/sensor/volume"
+            },
+            "Required Security Level": "SL-3"
+        },
+        {
+            "Name": "Detect Radio Frequency Service on Type A Smart Speaker",
+            "Service Class": "Detect_Radio_Frequency",
+            "Resource Name": {
+                "MQTT": "/sensor/rf"
+            },
+            "Required Security Level": "SL-3"
+        }
+    ],
+    "threat": [
+        {
+            "Name": "Detect Unrecognized Radio Frequency",
+            "Threat Class": "Unrecognized_Radio_Frequency",
+            "Threat Assessment Policy": "e2a12ef8-927f-4e4f-8304-72c111f9d6bf"
+        }
+    ],
+    "Description": {
+        "Manufacturer": "Foo Bar Inc.",
+        "Model": "Type A"
+    }
+}

@@ -1,0 +1,7 @@
+{
+	"uuid": "c71ff4ff-3c8a-462c-a83e-253af288eafb",
+	"Name": "Thermostat Access Policy",
+	"Priority":0,
+	"Policy":"?sl rdf:type ssso:Security_Level.?User ssso:hasPolicy ?sl.FILTER (?sl IN (ssso:SL-1, ssso:SL-2, ssso:SL-3, ssso:SL-4)).OPTIONAL{?User ssso:hasContext ssso:HVAC_Manager.}.OPTIONAL{?User ssso:hasContext ?loc.?loc rdf:type ssso:Location.?eq ssso:hasService ?Service.?eq ssso:hasContext ?loc.}                ",
+	"Description": "Only Authenticated Users in HVAC Manager Group or Users that have the same location as the thermostat can access the control system."
+}

@@ -1,0 +1,7 @@
+{
+	"uuid": "e2e6261d-55c2-49da-b88b-a24412d271b8",
+	"Name": "Threat Mitigation Policy for Unexpected Device Connection ",
+	"Priority":0,
+    "Policy": "                    ?Equipment ssso:hasContext ?loc.                    ?loc rdf:type ssso:Location.                    ?eq ssso:hasContext ?loc.                    ?eq ssso:hasService ?svc.                    ?svc rdf:type ssso:Encryption_in_Transit.                    BIND (?svc AS ?Enable).                    BIND (ssso:TL-0 AS ?Threat_Level).",
+	"Description": "Enable all Encryption in Transit services in the location/group, Mitigated Threat Level is TL-0 "
+}

@@ -1,0 +1,62 @@
+{
+    "uuid": "0a0284fc-68d9-429f-9cc5-952819ea4bbe",
+    "Equipment Model Name": "RFID_Door_Lock Model A",
+    "Equipment Model Version": "4.1",
+    "last_update_timestamp": "2019-08-03T21:23:53.581662+00:00",
+    "Equipment Class": "RFID_Door_Lock",
+    "Service": [
+        {
+            "Name": "NFC Authentication Service on RIFD Door Lock",
+            "Service Class": "NFC_Authentication",
+            "Resource Name": {
+                "RPC": "/nfcauth"
+            },
+            "Trust Level Assessment Policy": "cb965d9e-2887-44c7-a9e9-336c398712a4"
+        },
+        {
+            "Name": "Smart Card Authentication Service on RIFD Door Lock",
+            "Service Class": "Smart_Card_Authentication",
+            "Resource Name": {
+                "RPC": "/smcdcauth"
+            },
+            "Trust Level Assessment Policy": "cb965d9e-2887-44c7-a9e9-336c398712a4"
+        },
+        {
+            "Name": "Open Door Service on Type A RIFD Door Lock",
+            "Service Class": "Open_Door",
+            "Resource Name": {
+                "RPC": "/open_door"
+            },
+            "Security Assessment Policy": "fcfdb350-f613-4dfa-81eb-45f35e4d5fff"
+        },
+        {
+            "Name": "Close_Door Service on Type A Smart RIFD Door Lock",
+            "Service Class": "Close_Door",
+            "Resource Name": {
+                "RPC": "/close_door"
+            },
+            "Security Assessment Policy": "fcfdb350-f613-4dfa-81eb-45f35e4d5fff"
+        }
+    ],
+    "threat": [
+      {
+            "Name": "Electromagnetic_Attack Detected by RF Sensors",
+            "Threat Class": "Electromagnetic_Attack",
+            "Threat Assessment Policy": "dd361e39-62e3-4ebe-a35a-3af19a6caa4b"
+        },
+      {
+            "Name": "Unexpected Door Open",
+            "Threat Class": "Unexpected_Door_Open",
+            "Threat Assessment Policy": "3456b5d8-7276-4ada-a14c-210919f740e8"
+        },
+      {
+            "Name": "Failed_Hardware_Integrity",
+            "Threat Class": "Failed_Hardware_Integrity_Check",
+            "Threat Assessment Policy": "57b64ef9-17b2-404c-82c5-0e43e8019e62"
+        }
+    ],
+    "Description": {
+        "Manufacturer": "Foo Bar Inc.",
+        "Model": "Type A"
+    }
+}

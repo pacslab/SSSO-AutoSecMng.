@@ -1,0 +1,55 @@
+{
+    "uuid": "f80ca2c1-79e7-49a8-bb42-e5a90aeadcdb",
+    "Equipment Model Name": "Fire Damper Model A",
+    "Equipment Model Version": "0.1",
+    "last_update_timestamp": "2019-08-03T21:23:53.581662+00:00",
+    "Equipment Class": "Fire_Damper",
+    "Service": [
+        {
+            "Name": "Detect_Fire",
+            "Service Class": "Detect_Fire",
+            "Resource Name": {
+                "MQTT": "/Fire"
+            },
+            "Access Policy": "ca067e92-2dbf-4841-8561-fefe39b71cc9"
+        },
+        {
+            "Name": "Detect_Smoke",
+            "Service Class": "Detect_Smoke",
+            "Resource Name": {
+                "MQTT": "/Smoke"
+            },
+            "Access Policy": "ca067e92-2dbf-4841-8561-fefe39b71cc9"
+        },
+        {
+            "Name": "Detect_CO_Level",
+            "Service Class": "Detect_CO_Level",
+            "Resource Name": {
+                "MQTT": "/CO_Level"
+            },
+            "Access Policy": "ca067e92-2dbf-4841-8561-fefe39b71cc9"
+        },
+        {
+            "Name": "Close_Window",
+            "Service Class": "Close_Window",
+            "Resource Name": {
+                "RPC": "/Close_Window"
+            },
+            "Access Policy": "65e240ae-24c2-498c-9638-cc20b7152fa0"
+        },
+        {
+            "Name": "Open_Window",
+            "Service Class": "Open_Window",
+            "Resource Name": {
+                "RPC": "/Open_Window"
+            },
+            "Access Policy": "65e240ae-24c2-498c-9638-cc20b7152fa0"
+        }
+    ],
+    "threat": [
+    ],
+    "Description": {
+        "Manufacturer": "Foo Bar Inc.",
+        "Model": "Type A"
+    }
+}

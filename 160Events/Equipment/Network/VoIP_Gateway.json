@@ -1,0 +1,27 @@
+{
+    "uuid": "dbde7ba3-b715-49be-b25b-a266502d9e7a",
+    "Equipment Model Name": "VoIP Gateway Model A",
+    "Equipment Model Version": "7.1",
+    "last_update_timestamp": "2019-08-03T21:23:53.581662+00:00",
+    "Equipment Class": "VoIP_Gateway",
+    "Service": [
+        {
+            "Name": "Encryption in Transit Service on VoIP Gateway",
+            "Service Class": "Encryption_in_Transit",
+            "Resource Name": {
+                "HTTP": "/ecrptrst"
+            },
+            "Required Security Level": "SL-1"
+        }
+    ],
+    "threat": [
+        {
+            "Name": "Wiretapping_Attack",
+            "Threat Class": "Wiretapping_Attack",
+            "Threat Mitigation Policy": "8ba2c399-267e-4644-bfad-687c33021b00"
+        }
+    ],
+    "Description": {
+        "Manufacturer": "Foo Bar Inc."
+    }
+}

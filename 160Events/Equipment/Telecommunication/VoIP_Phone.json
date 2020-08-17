@@ -1,0 +1,43 @@
+{
+    "uuid": "ad1aba06-ff93-4a7b-9bfe-0851da1d6088",
+    "Equipment Model Name": "VoIP Phone Model A",
+    "Equipment Model Version": "0.1",
+    "last_update_timestamp": "2019-08-03T21:23:53.581662+00:00",
+    "Equipment Class": "VoIP_Phone",
+    "Service": [
+        {
+            "Name": "Video Call Service on Type A VoIP Phone",
+            "Service Class": "Video_Call",
+            "Resource Name": {
+                "RPC": "/vdc"
+            },
+            "Required Security Level": "SL-4"
+        },
+        {
+            "Name": "Call Service on Type A VoIP Phone",
+            "Service Class": "Call",
+            "Resource Name": {
+                "RPC": "/call"
+            },
+            "Required Security Level": "SL-4"
+        },
+        {
+            "Name": "Encryption in Transit Service on VoIP Phone",
+            "Service Class": "Encryption_in_Transit",
+            "Resource Name": {
+                "RPC": "/ecrptrst"
+            },
+            "Required Security Level": "SL-1"
+        }
+    ],
+    "threat": [
+        {
+            "Name": "Wiretapping_Attack",
+            "Threat Class": "Wiretapping_Attack",
+            "Threat Mitigation Policy": "8ba2c399-267e-4644-bfad-687c33021b00"
+        }
+    ],
+    "Description": {
+        "Manufacturer": "Foo Bar Inc."
+    }
+}

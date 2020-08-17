@@ -1,0 +1,31 @@
+{
+    "uuid": "7f2e5e81-a3d4-44cb-95c0-4ad9839a7f12",
+    "Equipment Model Name": "Temperature_Sensor Model A",
+    "Equipment Model Version": "1.1",
+    "last_update_timestamp": "2019-08-03T21:23:53.581662+00:00",
+    "Equipment Class": "Temperature_Sensor",
+    "Service": [
+        {
+            "Name": "Measure_Temperature",
+            "Service Class": "Measure_Temperature",
+            "Resource Name": {
+                "MQTT": "/temp"
+            },
+            "Access Policy": "ca067e92-2dbf-4841-8561-fefe39b71cc9"
+        },
+        {
+            "Name": "Measure_Humidity",
+            "Service Class": "Measure_Humidity",
+            "Resource Name": {
+                "MQTT": "/humidity"
+            },
+            "Access Policy": "ca067e92-2dbf-4841-8561-fefe39b71cc9"
+        }
+    ],
+    "threat": [
+    ],
+    "Description": {
+        "Manufacturer": "Foo Bar Inc.",
+        "Model": "Type A"
+    }
+}

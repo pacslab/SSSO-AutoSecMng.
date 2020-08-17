@@ -1,0 +1,23 @@
+{
+    "uuid": "97d60922-f9d0-489c-a0d9-417195be658c",
+    "Equipment Model Name": "Landline Phone Model A",
+    "Equipment Model Version": "0.1",
+    "last_update_timestamp": "2019-08-03T21:23:53.581662+00:00",
+    "Equipment Class": "Landline_Phone",
+    "Service": [
+
+        {
+            "Name": "Call Service on Type A Landline Phone",
+            "Service Class": "Call",
+            "Resource Name": {
+                "RPC": "/call"
+            },
+            "Required Security Level": "SL-4"
+        }
+    ],
+    "threat": [
+    ],
+    "Description": {
+        "Manufacturer": "Foo Bar Inc."
+    }
+}

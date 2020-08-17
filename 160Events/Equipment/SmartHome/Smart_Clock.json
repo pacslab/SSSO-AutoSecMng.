@@ -1,0 +1,23 @@
+{
+    "uuid": "c3c7b4f8-c54c-48c0-9088-e74a65af4c6e",
+    "Equipment Model Name": "Smart Clock Model A",
+    "Equipment Model Version": "3.1",
+    "last_update_timestamp": "2019-08-03T21:23:53.581662+00:00",
+    "Equipment Class": "Smart_Clock",
+    "Service": [
+        {
+            "Name": "Play Audio Service on Type A Smart Clock",
+            "Service Class": "Play_Audio",
+            "Resource Name": {
+                "RPC": "/audioplayer"
+            },
+            "Required Security Level": "SL-2",
+            "Request Model": "72caf2cf-2430-4536-8e8b-76cefd66e009"
+        }
+    ],
+    "threat": [
+    ],
+    "Description": {
+        "Manufacturer": "Foo Bar Inc."
+    }
+}

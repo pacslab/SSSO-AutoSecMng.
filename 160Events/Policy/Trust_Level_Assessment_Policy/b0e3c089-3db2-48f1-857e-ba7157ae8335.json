@@ -1,0 +1,7 @@
+{
+	"uuid": "b0e3c089-3db2-48f1-857e-ba7157ae8335",
+	"Name": "Token Authentication",
+	"Priority":0,
+	"Policy":"OPTIONAL{ssso:Token_Maximum_Age rdf:type ssso:Variable.ssso:Token_Maximum_Age ssso:hasData ?age.FILTER (?age <= '10'^^xsd:int).}.BIND (IF(BOUND(?age), ssso:SL-2, ssso:SL-0) as ?Trust_Level)",
+	"Description": "Token_Maximum_Age<=10 -> SL-2 else SL-0"
+}

@@ -1,0 +1,7 @@
+{
+	"uuid": "801cd727-18d3-4256-af9c-2e8c6ad77e4c",
+	"Name": "Server Manager Access Policy",
+	"Priority":0,
+	"Policy":"?sl rdf:type ssso:Security_Level.?User ssso:hasPolicy ?sl.FILTER (?sl IN (ssso:SL-1, ssso:SL-2, ssso:SL-3, ssso:SL-4)).?User ssso:hasContext ssso:Server_Manager.",
+	"Description": "Only Authenticated Users in Server Manager Group can access the server."
+}

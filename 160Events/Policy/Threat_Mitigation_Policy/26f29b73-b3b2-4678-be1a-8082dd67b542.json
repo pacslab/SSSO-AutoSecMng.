@@ -1,0 +1,7 @@
+{
+	"uuid": "26f29b73-b3b2-4678-be1a-8082dd67b542",
+	"Name": "Threat Mitigation Policy for Active Malware",
+	"Priority":0,
+    "Policy": "                    ?Equipment ssso:hasService ?svc.                    BIND (?svc AS ?Disable).                    BIND (ssso:TL-4 AS ?Threat_Level).",
+	"Description": "Disable all services on the device, Mitigated Threat Level is TL-4 "
+}

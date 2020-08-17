@@ -1,0 +1,7 @@
+{
+	"uuid": "cb965d9e-2887-44c7-a9e9-336c398712a4",
+	"Name": "NFC Authentication",
+	"Priority":0,
+	"Policy":"                OPTIONAL{                    ssso:NFC_Tag_Maximum_Age rdf:type ssso:Variable.                    ssso:NFC_Tag_Maximum_Age ssso:hasData ?age.                    FILTER (?age <= '12'^^xsd:int).                }                    BIND (IF(BOUND(?age), ssso:SL-2, ssso:SL-0) as ?Trust_Level)",
+	"Description": "NFC_Tag_Maximum_Age<=12 -> SL-2 else SL-0"
+}

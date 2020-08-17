@@ -1,0 +1,7 @@
+{
+	"uuid": "820e1c09-b494-4134-87e2-301abd9d3b2f",
+	"Name": "Threat Assessment Policy regarding Credentials on the streaming server",
+	"Priority":0,
+    "Policy": "                OPTIONAL{                ?Equipment ssso:hasService ?eit.                ?eit rdf:type ssso:Token_Authentication.                ?eit ssso:hasContext ssso:Disabled.                }                BIND (IF(BOUND(?eit), ssso:SL-0, ssso:SL-3) as ?Threat_Level).       ",
+	"Description": "Token Auth on the device disabled -> TL-0 Otherwise -> TL-3"
+}

@@ -1,0 +1,7 @@
+{
+	"uuid": "68b4952d-1109-4e8f-b14f-0994e87c2d7d",
+	"Name": "Threat Mitigation Policy for Unrecognized File",
+	"Priority":0,
+    "Policy": "                    ?Equipment ssso:hasService ?svc.                    ?svc rdf:type ssso:Encryption_at_Rest.                    BIND (?svc AS ?Enable).                    BIND (ssso:TL-0 AS ?Threat_Level).",
+	"Description": "Enable all Encryption at Rest services on the device, Mitigated Threat Level is TL-0 "
+}

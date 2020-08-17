@@ -1,0 +1,7 @@
+{
+	"uuid": "e669ac1d-7337-4107-8422-1e980d4a953d",
+	"Name": "HVAC Control System Access Policy",
+	"Priority":0,
+	"Policy":"?sl rdf:type ssso:Security_Level.?User ssso:hasPolicy ?sl.FILTER (?sl IN (ssso:SL-1, ssso:SL-2, ssso:SL-3, ssso:SL-4)).?User ssso:hasContext ssso:HVAC_Manager.",
+	"Description": "Only Authenticated Users in HVAC Manager Group can access the control system."
+}

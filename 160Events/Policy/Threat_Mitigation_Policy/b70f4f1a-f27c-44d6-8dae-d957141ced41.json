@@ -1,0 +1,7 @@
+{
+	"uuid": "b70f4f1a-f27c-44d6-8dae-d957141ced41",
+	"Name": "Threat Mitigation Policy for ARP Attack",
+	"Priority":0,
+    "Policy": "                    ?Equipment ssso:hasContext ?loc.                    ?loc rdf:type ssso:Location.                    ?eq ssso:hasContext ?loc.                    ?eq ssso:hasService ?svc.                    ?svc rdf:type ssso:Share_Data.                    BIND (?svc AS ?Disable).                    BIND (ssso:TL-2 AS ?Threat_Level).",
+	"Description": "Disable all share data services in the location/group, Mitigated Threat Level is TL-2 "
+}

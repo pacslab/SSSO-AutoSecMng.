@@ -1,0 +1,7 @@
+{
+	"uuid": "57b64ef9-17b2-404c-82c5-0e43e8019e62",
+	"Name": "Threat Assessment Policy for Failed_Hardware_Integrity_Check",
+	"Priority":0,
+	"Policy": "OPTIONAL{            ?Equipment rdf:type ?class.            ?class rdfs:subClassOf ?topclass.            FILTER (?topclass IN (ssso:Telecommunication, ssso:Network, ssso:Lock, ssso:AV)).            BIND (?class AS ?con1).        }.                BIND (IF(BOUND(?con1), ssso:TL-4, ssso:TL-2) AS ?Threat_Level)                ",
+	"Description": "AV, Network, Lock, Telecommunication ->TL-4 otherwise TL-2"
+}

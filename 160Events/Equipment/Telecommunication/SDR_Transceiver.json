@@ -1,0 +1,35 @@
+{
+    "uuid": "51d0faff-0cf2-4156-b6ae-e437aba7f789",
+    "Equipment Model Name": "SDR Transceiver Model A",
+    "Equipment Model Version": "4.1",
+    "last_update_timestamp": "2019-08-03T21:23:53.581662+00:00",
+    "Equipment Class": "SDR_Transceiver",
+    "Service": [
+        {
+            "Name": "Broadcast_Radio Service",
+            "Service Class": "Broadcast_Radio",
+            "Resource Name": {
+                "RPC": "/rf"
+            },
+            "Required Security Level": "SL-4"
+        },
+        {
+            "Name": "Detect_Radio_Frequency Service",
+            "Service Class": "Detect_Radio_Frequency",
+            "Resource Name": {
+                "RPC": "/rfsensor"
+            },
+            "Required Security Level": "SL-2"
+        }
+    ],
+    "threat": [
+        {
+            "Name": "Detect Unrecognized Radio Frequency",
+            "Threat Class": "Unrecognized_Radio_Frequency",
+            "Threat Assessment Policy": "e2a12ef8-927f-4e4f-8304-72c111f9d6bf"
+        }
+    ],
+    "Description": {
+        "Manufacturer": "Foo Bar Inc."
+    }
+}

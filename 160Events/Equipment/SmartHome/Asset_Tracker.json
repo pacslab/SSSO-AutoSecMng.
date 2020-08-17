@@ -1,0 +1,40 @@
+{
+    "uuid": "f5a84196-3d47-4036-adc5-e3f142709ab7",
+    "Equipment Model Name": "Asset Tracker Model A",
+    "Equipment Model Version": "4.1",
+    "last_update_timestamp": "2019-08-03T21:23:53.581662+00:00",
+    "Equipment Class": "Asset_Tracker",
+    "Service": [
+        {
+            "Name": "Detect the integrity of the tracked asset",
+            "Service Class": "Detect_Hardware_Integrity",
+            "Resource Name": {
+                "HTTP": "/inte"
+            },
+            "Access Policy": "f55ef69f-bbca-4b7b-a71f-6c2efce3a405"
+        },
+        {
+            "Name": "Detect the location of the tracked asset",
+            "Service Class": "Detect_Hardware_Integrity",
+            "Resource Name": {
+                "HTTP": "/inte"
+            },
+            "Access Policy": "f55ef69f-bbca-4b7b-a71f-6c2efce3a405"
+        }
+    ],
+    "threat": [
+        {
+            "Name": "Missing_Asset",
+            "Threat Class": "Missing_Asset",
+            "Threat Assessment Policy": "43fbb6fa-45e6-4650-b175-c2a9c9e88167"
+        },
+                {
+            "Name": "Unauthorized_Location",
+            "Threat Class": "Unauthorized_Location",
+            "Threat Assessment Policy": "43fbb6fa-45e6-4650-b175-c2a9c9e88167"
+        }
+    ],
+    "Description": {
+        "Manufacturer": "Foo Bar Inc."
+    }
+}

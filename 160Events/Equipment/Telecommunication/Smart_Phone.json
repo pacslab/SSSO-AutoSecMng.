@@ -1,0 +1,138 @@
+{
+    "uuid": "1b7aa517-9490-468d-ae64-eb9cac5e694e",
+    "Equipment Model Name": "Smart Phone Model A",
+    "Equipment Model Version": "0.1",
+    "last_update_timestamp": "2019-08-03T21:23:53.581662+00:00",
+    "Equipment Class": "Smart_Phone",
+    "Service": [
+        {
+            "Name": "Play Audio Service on Type A Smart Phone",
+            "Service Class": "Play_Audio",
+            "Resource Name": {
+                "HTTP": "/audioplayer",
+                "RPC": "/audioplayer"
+            },
+            "Required Security Level": "SL-2",
+            "Request Model": "72caf2cf-2430-4536-8e8b-76cefd66e009"
+        },
+        {
+            "Name": "Play Video Service on Type A Smart Phone",
+            "Service Class": "Play_Video",
+            "Resource Name": {
+                "HTTP": "/videoplayer",
+                "RPC": "/videoplayer"
+            },
+            "Required Security Level": "SL-2"
+        },
+        {
+            "Name": "Video Call Service on Type A Smart Phone",
+            "Service Class": "Video_Call",
+            "Resource Name": {
+                "RPC": "/vdc"
+            },
+            "Required Security Level": "SL-4"
+        },
+        {
+            "Name": "Call Service on Type A Smart Phone",
+            "Service Class": "Call",
+            "Resource Name": {
+                "RPC": "/call"
+            },
+            "Required Security Level": "SL-4"
+        },
+        {
+            "Name": "Take Photo Service on Type A Smart Phone",
+            "Service Class": "Take_Photo",
+            "Resource Name": {
+                "HTTP": "/photo"
+            },
+            "Required Security Level": "SL-2"
+        },
+        {
+            "Name": "Password Authentication Service on Type A Smart Phone",
+            "Service Class": "Password_Authentication",
+            "Resource Name": {
+                "RPC": "/passwdauth"
+            },
+            "Trust Level Assessment Policy": "d8a07c6d-cbbd-4495-b88c-5b1e819e05d2"
+        },
+        {
+            "Name": "Face Authentication Service on Type A Smart Phone",
+            "Service Class": "Face_Authentication",
+            "Resource Name": {
+                "RPC": "/faceauth"
+            },
+            "Security Level Provided": "SL-3"
+        },
+        {
+            "Name": "Voice Authentication Service on Type A Smart Speaker",
+            "Service Class": "Voice_Authentication",
+            "Resource Name": {
+                "RPC": "/voiceauth"
+            },
+            "Security Level Provided": "SL-3"
+        },
+        {
+            "Name": "Capture Video Service on Type A Smart Phone",
+            "Service Class": "Capture_Video",
+            "Resource Name": {
+                "RPC": "/capvid"
+            },
+            "Required Security Level": "SL-4"
+        },
+        {
+            "Name": "Record Audio Service on Type A Smart Phone",
+            "Service Class": "Record_Audio",
+            "Resource Name": {
+                "RPC": "/videorecorder"
+            },
+            "Required Security Level": "SL-4"
+        },
+        {
+            "Name": "Detect Location Service on Type A Smart Phone",
+            "Service Class": "Track_Location",
+            "Resource Name": {
+                "HTTP": "/location"
+            },
+            "Required Security Level": "SL-4"
+        },
+        {
+            "Name": "Fingerprint Authentication Service on Type A Smart Phone",
+            "Service Class": "Fingerprint_Authentication",
+            "Resource Name": {
+                "RPC": "/fingerprintauth"
+            },
+            "Security Level Provided": "SL-3"
+        },
+        {
+            "Name": "OTP Authentication Service on Type A Smart Phone",
+            "Service Class": "OTP_Authentication",
+            "Resource Name": {
+                "RPC": "/otp"
+            },
+            "Security Level Provided": "SL-1"
+        }
+    ],
+    "threat": [
+        {
+            "Name": "MAPE-k engine cannot access the device",
+            "Threat Class": "Inaccessible_MAPE-k_Engine",
+            "Threat Level": "TL-4"
+        },
+        {
+            "Name": "Unauthorized Running Service",
+            "Threat Class": "Unauthorized_Running_Service",
+            "Threat Level": "TL-4"
+        },
+        {
+            "Name": "Unauthorized Action Detected",
+            "Threat Class": "Unauthorized_Action",
+            "Threat Level": "TL-3"
+        }
+    ],
+    "Description": {
+        "Manufacturer": "Foo Bar Inc.",
+        "Screen Size": "75",
+        "Screen Resolution": "3840x2160"
+    }
+}

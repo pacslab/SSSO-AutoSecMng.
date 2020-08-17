@@ -1,0 +1,44 @@
+{
+    "uuid": "ba429eca-32cd-4934-90d5-9bfc2aacef2f",
+    "Equipment Model Name": "Safe Key Lock Model A",
+    "Equipment Model Version": "2.1",
+    "last_update_timestamp": "2019-08-03T21:23:53.581662+00:00",
+    "Equipment Class": "Smart_Key_Lock",
+    "Service": [
+        {
+            "Name": "Password Authentication Service on Type A Smart_Key_Lock",
+            "Service Class": "Password_Authentication",
+            "Resource Name": {
+                "RPC": "/passwdauth"
+            },
+            "Security Level Provided": "SL-2"
+        },
+        {
+            "Name": "Turn on controlled resource Service on Type A Smart_Key_Lock",
+            "Service Class": "Turn_on",
+            "Resource Name": {
+                "RPC": "/on"
+            },
+            "Required Security Level": "SL-2"
+        },
+        {
+            "Name": "Turn off controlled resource Service on Type A Smart_Key_Lock",
+            "Service Class": "Turn_off",
+            "Resource Name": {
+                "RPC": "/ff"
+            },
+            "Required Security Level": "SL-2"
+        }
+    ],
+    "threat": [
+      {
+            "Name": "Brute Force Attack by Password Hacking",
+            "Threat Class": "Brute_Force_Attack",
+            "Threat Assessment Policy": "e28430ec-a753-4d94-b6bc-89ed5c8054f2"
+      }
+    ],
+    "Description": {
+        "Manufacturer": "Foo Bar Inc.",
+        "Model": "Type A"
+    }
+}

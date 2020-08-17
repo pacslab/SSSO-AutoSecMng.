@@ -1,0 +1,7 @@
+{
+	"uuid": "43fbb6fa-45e6-4650-b175-c2a9c9e88167",
+	"Name": "Threat Assessment Policy for Unexpected Occupancy",
+	"Priority": 0,
+	"Policy": "OPTIONAL{                        ?loc rdf:type ssso:Location.                        ?cl rdf:type ssso:Classification_Level.                        ?eq ssso:hasContext ?loc.                        ?loc ssso:hasPolicy ?cl.                        FILTER (?cl IN (ssso:Classified)).                        BIND (?cl AS ?con1).                    }.                BIND (                IF(BOUND(?con1), ssso:TL-4, ssso:TL-2) AS ?Threat_Level)                ",
+	"Description": "Classified -> TL-4 otherwise TL-2"
+}

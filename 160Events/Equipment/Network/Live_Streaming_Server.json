@@ -1,0 +1,87 @@
+{
+    "uuid": "bc32a852-2803-4484-972c-be1156991231",
+    "Equipment Model Name": "Live Streaming Server Model A",
+    "Equipment Model Version": "5.1",
+    "last_update_timestamp": "2019-08-03T21:23:53.581662+00:00",
+    "Equipment Class": "Live_Streaming_Server",
+    "Service": [
+        {
+            "Name": "Share Data Service on Type A Live Streaming Server",
+            "Service Class": "Share_Data",
+            "Resource Name": {
+                "HTTP": "/sharedata"
+            },
+            "Required Security Level": "SL-4"
+        },
+        {
+            "Name": "Stream Media Service on Type A Live Streaming Server",
+            "Service Class": "Stream_Media",
+            "Resource Name": {
+                "HTTP": "/stream"
+            },
+            "Required Security Level": "SL-4"
+        },
+        {
+            "Name": "Encryption in Transit Service on Type A Streaming Server",
+            "Service Class": "Encryption_in_Transit",
+            "Resource Name": {
+                "HTTP": "/ecrptrst"
+            },
+            "Required Security Level": "SL-0"
+        },
+        {
+            "Name": "Token Authentication Service on Type A Streaming Server",
+            "Service Class": "Token_Authentication",
+            "Resource Name": {
+                "HTTP": "/token"
+            },
+            "Trust Level Assessment Policy": "b0e3c089-3db2-48f1-857e-ba7157ae8335"
+        },
+        {
+            "Name": "OAuth Authentication Service on Type A Streaming Server",
+            "Service Class": "OAuth_Authentication",
+            "Resource Name": {
+                "HTTP": "/oauth"
+            },
+            "Trust Level Assessment Policy": "347286fc-4dc5-4bf7-8ed7-fc806370d71a"
+        },
+        {
+            "Name": "Password Authentication Service on Streaming Server",
+            "Service Class": "Password_Authentication",
+            "Resource Name": {
+                "RPC": "/passwdauth"
+            },
+            "Trust Level Assessment Policy": "c6338919-406d-46b5-936b-c4a4573afea1"
+        }
+    ],
+    "threat": [
+        {
+            "Name": "Certificate_Not_Matching",
+            "Threat Class": "Certificate_Not_Matching",
+            "Threat Assessment Policy": "deca6ac5-6b4e-4c61-a986-8d53f5e80332"
+        },
+        {
+            "Name": "Expired_Certificate",
+            "Threat Class": "Expired_Certificate",
+            "Threat Assessment Policy": "deca6ac5-6b4e-4c61-a986-8d53f5e80332"
+        },
+        {
+            "Name": "Credential_Not_Matching",
+            "Threat Class": "Credential_Not_Matching",
+            "Threat Assessment Policy": "820e1c09-b494-4134-87e2-301abd9d3b2f"
+        },
+        {
+            "Name": "Expired_Credential",
+            "Threat Class": "Expired_Credential",
+            "Threat Assessment Policy": "820e1c09-b494-4134-87e2-301abd9d3b2f"
+        },
+        {
+            "Name": "Stolen_Credential",
+            "Threat Class": "Stolen_Credential",
+            "Threat Level": "TL-3"
+        }
+    ],
+    "Description": {
+        "Manufacturer": "Foo Bar Inc."
+    }
+}

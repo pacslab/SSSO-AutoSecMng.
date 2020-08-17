@@ -1,0 +1,31 @@
+{
+    "uuid": "ac3ef45f-2366-4a71-9a8d-1d2777625c11",
+    "Equipment Model Name": "Projector Model A",
+    "Equipment Model Version": "1.1",
+    "last_update_timestamp": "2019-08-03T21:23:53.581662+00:00",
+    "Equipment Class": "Projector",
+    "Service": [
+        {
+            "Name": "Play Audio Service on Type A Projector",
+            "Service Class": "Play_Audio",
+            "Resource Name": {
+                "RPC": "/audioplayer"
+            },
+            "Required Security Level": "SL-2"
+        },
+        {
+            "Name": "Play Video Service on Type A Projector",
+            "Service Class": "Play_Video",
+            "Resource Name": {
+                "RPC": "/videoplayer"
+            },
+            "Required Security Level": "SL-2"
+        }
+    ],
+    "threat": [],
+    "Description": {
+        "Manufacturer": "Foo Bar Inc.",
+        "Screen Size": "100",
+        "Screen Resolution": "3840x2160"
+    }
+}

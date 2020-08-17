@@ -1,0 +1,56 @@
+{
+    "uuid": "a42f3fb6-ce3f-4900-ad35-d0a71920996d",
+    "Equipment Model Name": "Router Model A",
+    "Equipment Model Version": "5.1",
+    "last_update_timestamp": "2019-08-03T21:23:53.581662+00:00",
+    "Equipment Class": "Router",
+    "Service": [
+        {
+            "Name": "Broadcast_Wi-Fi Service on Type A Router",
+            "Service Class": "Broadcast_Wi-Fi",
+            "Resource Name": {
+                "HTTP": "/wifi"
+            },
+            "Required Security Level": "SL-4"
+        },
+        {
+            "Name": "Virtual_Private_Network_Server Service on Type A Router",
+            "Service Class": "Virtual_Private_Network_Server",
+            "Resource Name": {
+                "HTTP": "/VPN"
+            },
+            "Required Security Level": "SL-4"
+        },
+        {
+            "Name": "Connect_Internet Service on Type A Router",
+            "Service Class": "Connect_Internet",
+            "Resource Name": {
+                "HTTP": "/internet"
+            },
+            "Required Security Level": "SL-4"
+        },
+        {
+            "Name": "Password Authentication Service on Router",
+            "Service Class": "Password_Authentication",
+            "Resource Name": {
+                "RPC": "/passwdauth"
+            },
+            "Trust Level Assessment Policy": "c6338919-406d-46b5-936b-c4a4573afea1"
+        }
+    ],
+    "threat": [
+        {
+            "Name": "ARP_Attack",
+            "Threat Class": "ARP_Attack",
+            "Threat Mitigation Policy": "b70f4f1a-f27c-44d6-8dae-d957141ced41"
+        },
+        {
+            "Name": "Unexpected_Device_Connection",
+            "Threat Class": "Unexpected_Device_Connection",
+            "Threat Mitigation Policy": "e2e6261d-55c2-49da-b88b-a24412d271b8"
+        }
+    ],
+    "Description": {
+        "Manufacturer": "Foo Bar Inc."
+    }
+}

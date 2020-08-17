@@ -1,0 +1,54 @@
+{
+    "uuid": "0e471167-e515-49ef-8dfc-502167daf8fa",
+    "Equipment Model Name": "Dimmable Light Model A",
+    "Equipment Model Version": "3.1",
+    "last_update_timestamp": "2019-08-03T21:23:53.581662+00:00",
+    "Equipment Class": "Dimmable_Light",
+    "Service": [
+        {
+            "Name": "Turn on the light",
+            "Service Class": "Turn_on",
+            "Resource Name": {
+                "HTTP": "/power/on"
+            },
+            "Access Policy": "f55ef69f-bbca-4b7b-a71f-6c2efce3a405"
+        },
+        {
+            "Name": "Turn off the light",
+            "Service Class": "Turn_off",
+            "Resource Name": {
+                "HTTP": "/power/off"
+            },
+            "Access Policy": "f55ef69f-bbca-4b7b-a71f-6c2efce3a405"
+        },
+        {
+            "Name": "Dimmer Setpoint Control",
+            "Service Class": "Dimmer_Setpoint_Control",
+            "Resource Name": {
+                "HTTP": "/setpoint/dimmer"
+            },
+            "Access Policy": "f55ef69f-bbca-4b7b-a71f-6c2efce3a405"
+        },
+        {
+            "Name": "Detect Brightness",
+            "Service Class": "Detect_Brightness",
+            "Resource Name": {
+                "HTTP": "/sensor/brightness"
+            },
+            "Access Policy": "f55ef69f-bbca-4b7b-a71f-6c2efce3a405"
+        },
+        {
+            "Name": "Brightness Setpoint Control",
+            "Service Class": "Brightness_Setpoint_Control",
+            "Resource Name": {
+                "HTTP": "/setpoint/brightness"
+            },
+            "Access Policy": "f55ef69f-bbca-4b7b-a71f-6c2efce3a405"
+        }
+    ],
+    "threat": [
+    ],
+    "Description": {
+        "Manufacturer": "Foo Bar Inc."
+    }
+}

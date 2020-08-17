@@ -1,0 +1,7 @@
+{
+	"uuid": "8ba2c399-267e-4644-bfad-687c33021b00",
+	"Name": "Threat Mitigation Policy for Wiretapping attack",
+	"Priority":0,
+    "Policy": "                    ?Equipment ssso:hasService ?encrypt.                    ?encrypt rdf:type ssso:Encryption_in_Transit.                    ?Equipment ssso:hasContext ?loc.                    ?loc rdf:type ssso:Location.                    ?eq ssso:hasContext ?loc.                    ?eq ssso:hasService ?svc.                    ?svc rdf:type ssso:Call.                    BIND (?encrypt AS ?Enable).                    BIND (?svc AS ?Disable).                    BIND (ssso:TL-0 AS ?Threat_Level).",
+	"Description": "Disable all call services in the location/group, Enable Encryption in Transit service on the device, Mitigated Threat Level is TL-2 "
+}

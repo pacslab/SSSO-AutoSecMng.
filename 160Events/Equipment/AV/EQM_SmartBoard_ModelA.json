@@ -1,0 +1,109 @@
+{
+    "uuid": "ae137288-3782-432d-8d83-d5cee733fe4b",
+    "Equipment Model Name": "SmartBoard Model A",
+    "Equipment Model Version": "0.1",
+    "last_update_timestamp": "2019-08-03T21:23:53.581662+00:00",
+    "Equipment Class": "Smart_Board",
+    "Service": [
+        {
+            "Name": "Play Audio Service on Type A Smart Board",
+            "Service Class": "Play_Audio",
+            "Resource Name": {
+                "HTTP": "/audioplayer",
+                "RPC": "/audioplayer"
+            },
+            "Required Security Level": "SL-2",
+            "Request Model": "72caf2cf-2430-4536-8e8b-76cefd66e009"
+        },
+        {
+            "Name": "Play Video Service on Type A Smart Board",
+            "Service Class": "Play_Video",
+            "Resource Name": {
+                "HTTP": "/videoplayer",
+                "RPC": "/videoplayer"
+            },
+            "Required Security Level": "SL-2"
+        },
+        {
+            "Name": "Password Authentication Service on Type A Smart Board",
+            "Service Class": "Password_Authentication",
+            "Resource Name": {
+                "RPC": "/passwdauth"
+            },
+            "Trust Level Assessment Policy": "d8a07c6d-cbbd-4495-b88c-5b1e819e05d2"
+        },
+        {
+            "Name": "Face Authentication Service on Type A Smart Board",
+            "Service Class": "Face_Authentication",
+            "Resource Name": {
+                "RPC": "/faceauth"
+            },
+            "Security Level Provided": "SL-3"
+        },
+        {
+            "Name": "Capture Video Service on Type A Smart Board",
+            "Service Class": "Capture_Video",
+            "Resource Name": {
+                "RPC": "/capvid"
+            },
+            "Required Security Level": "SL-4"
+        },
+        {
+            "Name": "Record Audio Service on Type A Smart Board",
+            "Service Class": "Record_Audio",
+            "Resource Name": {
+                "RPC": "/videorecorder"
+            },
+            "Required Security Level": "SL-4"
+        },
+        {
+            "Name": "Share Screen Service on Type A Smart Board",
+            "Service Class": "Share_Screen",
+            "Resource Name": {
+                "RPC": "/screenshare"
+            },
+            "Required Security Level": "SL-4"
+        },
+        {
+            "Name": "Surrounding Brightness Level Sensing Service on Type A Smart Board",
+            "Service Class": "Detect_Brightness",
+            "Resource Name": {
+                "MQTT": "/sensor/brightness"
+            },
+            "Required Security Level": "SL-0"
+        },
+        {
+            "Name": "Occupancy Counting Service on Type A Smart Board",
+            "Service Class": "Count_Occupancy",
+            "Resource Name": {
+                "MQTT": "/sensor/occupancy"
+            },
+            "Required Security Level": "SL-0"
+        },
+        {
+            "Name": "Brightness Setpoint Control on Type A Smart Board",
+            "Service Class": "Brightness_Setpoint_Control",
+            "Resource Name": {
+                "HTTP": "/setpoint/brightness"
+            },
+            "Required Security Level": "SL-1"
+        }
+    ],
+    "threat": [
+        {
+            "Name": "Detect Unexpected Occupancy by Camera on Board",
+            "Threat Class": "Unexpected_Occupancy",
+            "Threat Assessment Policy": "43fbb6fa-45e6-4650-b175-c2a9c9e88167"
+        },
+        {
+            "Name": "Detect Network Traffic Sniffing",
+            "Threat Class": "Sniffing_Attack",
+            "Threat Level": "TL-4"
+        }
+    ],
+    "Description": {
+        "Manufacturer": "Foo Bar Inc.",
+        "Screen Size": "75",
+        "Screen Resolution": "3840x2160"
+    }
+}

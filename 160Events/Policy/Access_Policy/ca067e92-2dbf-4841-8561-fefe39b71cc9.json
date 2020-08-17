@@ -1,0 +1,7 @@
+{
+	"uuid": "ca067e92-2dbf-4841-8561-fefe39b71cc9",
+	"Name": "HVAC Sensor System Access Policy",
+	"Priority":0,
+	"Policy":"?sl rdf:type ssso:Security_Level.?User ssso:hasPolicy ?sl.?User ssso:hasContext ssso:HVAC_Sensor.",
+	"Description": "Only Devices in HVAC Sensor Group can access the sensors of HVAC system."
+}

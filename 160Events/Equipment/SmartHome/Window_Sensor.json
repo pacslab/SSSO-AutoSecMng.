@@ -1,0 +1,43 @@
+{
+    "uuid": "973dbd69-e0b8-4474-a0a7-0007f09c6a9c",
+    "Equipment Model Name": "Window Sensor Model A",
+    "Equipment Model Version": "3.1",
+    "last_update_timestamp": "2019-08-03T21:23:53.581662+00:00",
+    "Equipment Class": "Window_Sensor",
+    "Service": [
+        {
+            "Name": "Detect Motion",
+            "Service Class": "Detect_Motion",
+            "Resource Name": {
+                "MQTT": "/sensor/motion"
+            },
+            "Access Policy": "f55ef69f-bbca-4b7b-a71f-6c2efce3a405"
+        },
+        {
+            "Name": "Open_Window",
+            "Service Class": "Open_Window",
+            "Resource Name": {
+                "HTTP": "/open"
+            },
+            "Access Policy": "f55ef69f-bbca-4b7b-a71f-6c2efce3a405"
+        },
+        {
+            "Name": "Close_Window",
+            "Service Class": "Close_Window",
+            "Resource Name": {
+                "HTTP": "/close"
+            },
+            "Access Policy": "f55ef69f-bbca-4b7b-a71f-6c2efce3a405"
+        }
+    ],
+    "threat": [
+        {
+            "Name": "Unexpected Window Open",
+            "Threat Class": "Unexpected_Window_Open",
+            "Threat Assessment Policy": "3456b5d8-7276-4ada-a14c-210919f740e8"
+        }
+    ],
+    "Description": {
+        "Manufacturer": "Foo Bar Inc."
+    }
+}

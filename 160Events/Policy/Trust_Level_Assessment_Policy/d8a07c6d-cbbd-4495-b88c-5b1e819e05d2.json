@@ -1,0 +1,11 @@
+{
+	"uuid": "d8a07c6d-cbbd-4495-b88c-5b1e819e05d2",
+	"Name": "Password Authentication",
+	"Priority":0,
+	"Endpoint":{
+		"Type":"SPARQL",
+		"Data":"?dvc ssso:hasService ?Service.?loc rdf:type ssso:Location.?dvc ssso:hasContext ?loc.?eqp ssso:hasContext ?loc.?eqp ssso:hasService ?svc.?svc rdf:type ssso:Count_Occupancy.?svc ssso:hasContext ?Endpoint."
+	},
+	"Policy":"        OPTIONAL{ssso:Password_Rotation_Interval rdf:type ssso:Variable. ssso:Minimum_Password_Length rdf:type ssso:Variable. ?loc rdf:type ssso:Location. ?cl rdf:type ssso:Classification_Level. ?eq ssso:hasService ?Service. ?eq ssso:hasContext ?loc. ?loc ssso:hasPolicy ?cl. FILTER (?cl NOT IN (ssso:Classified)). ssso:Password_Rotation_Interval ssso:hasData ?pwdrotint. ssso:Minimum_Password_Length ssso:hasData ?pwdminlen. FILTER (?pwdrotint < '90'^^xsd:int). FILTER (?pwdminlen >= '8'^^xsd:int).}.BIND (IF(BOUND(?pwdrotint), ssso:SL-2, ssso:SL-1) as ?Trust_Level)",
+	"Description": "Minimum_Password_Length>=8 and Password_Rotation_Interval<90 and Classification level is not classified -> SL-2 else SL-1"
+}

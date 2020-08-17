@@ -1,0 +1,54 @@
+{
+    "uuid": "7bb0d935-c1a3-4ff0-a144-78684fa7d061",
+    "Equipment Model Name": "Smart Sweeper Model A",
+    "Equipment Model Version": "3.1",
+    "last_update_timestamp": "2019-08-03T21:23:53.581662+00:00",
+    "Equipment Class": "Smart_Sweeper",
+    "Service": [
+        {
+            "Name": "Turn on the sweeper",
+            "Service Class": "Turn_on",
+            "Resource Name": {
+                "HTTP": "/power/on"
+            },
+            "Access Policy": "f55ef69f-bbca-4b7b-a71f-6c2efce3a405"
+        },
+        {
+            "Name": "Turn off the sweeper",
+            "Service Class": "Turn_off",
+            "Resource Name": {
+                "HTTP": "/power/off"
+            },
+            "Access Policy": "f55ef69f-bbca-4b7b-a71f-6c2efce3a405"
+        },
+        {
+            "Name": "Measure_Distance",
+            "Service Class": "Measure_Distance",
+            "Resource Name": {
+                "HTTP": "/sensor/distance"
+            },
+            "Access Policy": "f55ef69f-bbca-4b7b-a71f-6c2efce3a405"
+        },
+        {
+            "Name": "Measure Magnetism",
+            "Service Class": "Measure_Magnetism",
+            "Resource Name": {
+                "HTTP": "/sensor/magnetism"
+            },
+            "Access Policy": "f55ef69f-bbca-4b7b-a71f-6c2efce3a405"
+        },
+        {
+            "Name": "Measure_Acceleration",
+            "Service Class": "Measure_Acceleration",
+            "Resource Name": {
+                "HTTP": "/setpoint/acceleration"
+            },
+            "Access Policy": "f55ef69f-bbca-4b7b-a71f-6c2efce3a405"
+        }
+    ],
+    "threat": [
+    ],
+    "Description": {
+        "Manufacturer": "Foo Bar Inc."
+    }
+}

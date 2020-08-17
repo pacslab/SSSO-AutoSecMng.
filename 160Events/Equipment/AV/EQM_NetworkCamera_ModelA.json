@@ -1,0 +1,74 @@
+{
+    "uuid": "9ba88a1b-98bd-4552-a570-3587e9fb213a",
+    "Equipment Model Name": "Network_Camera Model A",
+    "Equipment Model Version": "2.1",
+    "last_update_timestamp": "2019-08-03T21:23:53.581662+00:00",
+    "Equipment Class": "Network_Camera",
+    "Service": [
+        {
+            "Name": "Take Photo Service on Type A Smart Camera",
+            "Service Class": "Take_Photo",
+            "Resource Name": {
+                "HTTP": "/photo"
+            },
+            "Required Security Level": "SL-2"
+        },
+        {
+            "Name": "Face Authentication Service on Type A Smart Camera",
+            "Service Class": "Face_Authentication",
+            "Resource Name": {
+                "RPC": "/faceauth"
+            },
+            "Security Level Provided": "SL-3"
+        },
+        {
+            "Name": "Capture Video Service on Type A Smart Camera",
+            "Service Class": "Capture_Video",
+            "Resource Name": {
+                "RPC": "/capvid"
+            },
+            "Required Security Level": "SL-4"
+        },
+        {
+            "Name": "Detect Occupancy Service on Type A Smart Camera",
+            "Service Class": "Detect_Occupancy",
+            "Resource Name": {
+                "HTTP": "/sensor/occupancy"
+            },
+            "Required Security Level": "SL-2"
+        },
+        {
+            "Name": "Detect Motion Service on Type A Smart Camera",
+            "Service Class": "Detect_Motion",
+            "Resource Name": {
+                "HTTP": "/sensor/motion"
+            },
+            "Required Security Level": "SL-2"
+        },
+        {
+            "Name": "Detect Face Service on Type A Smart Camera",
+            "Service Class": "Detect_Face",
+            "Resource Name": {
+                "RPC": "/sensor/face"
+            },
+            "Required Security Level": "SL-4"
+        }
+    ],
+    "threat": [
+        {
+            "Name": "Detect Unexpected_Motion by Camera",
+            "Threat Class": "Unexpected_Motion",
+            "Threat Assessment Policy": "43fbb6fa-45e6-4650-b175-c2a9c9e88167"
+        },
+        {
+            "Name": "Detect Unrecognized_Face",
+            "Threat Class": "Unrecognized_Face",
+            "Threat Assessment Policy": "43fbb6fa-45e6-4650-b175-c2a9c9e88167"
+        }
+    ],
+    "Description": {
+        "Manufacturer": "Foo Bar Inc.",
+        "FPS": "60",
+        "Maximum Resolution": "3840x2160"
+    }
+}
