@@ -5,7 +5,7 @@
 @prefix ja:      <http://jena.hpl.hp.com/2005/11/Assembler#> .
 @prefix :        <#> .
 
-## Updateable in-memory dataset.
+## Define service
 
 <#service1> rdf:type fuseki:Service ;
     fuseki:name                       "SSSO" ;       # http://host:port/SSSO
@@ -21,7 +21,7 @@
 
 
 
-
+## Define dataset
 <#dataset>    rdf:type ja:RDFDataset ;
     rdfs:label "ssso" ;
     ja:defaultGraph
