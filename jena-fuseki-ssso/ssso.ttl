@@ -1,0 +1,1195 @@
+@prefix : <http://www.semanticweb.org/linch/ontologies/2018/11/ssso#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ssso: <http://www.semanticweb.org/linch/ontologies/2018/11/ssso#> .
+@base <http://www.semanticweb.org/linch/ontologies/2018/11/ssso> .
+
+<http://www.semanticweb.org/linch/ontologies/2018/11/ssso> rdf:type owl:Ontology .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled
+<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#typeOf
+ssso:typeOf rdf:type rdfs:Datatype .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#has
+ssso:has rdf:type owl:ObjectProperty ;
+         owl:equivalentProperty ssso:is ;
+         rdfs:subPropertyOf ssso:is ,
+                            owl:topObjectProperty .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#hasContext
+ssso:hasContext rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#hasEquipment
+ssso:hasEquipment rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#hasEvent
+ssso:hasEvent rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#hasPolicy
+ssso:hasPolicy rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#hasService
+ssso:hasService rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#hasUser
+ssso:hasUser rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#is
+ssso:is rdf:type owl:ObjectProperty ;
+        rdfs:subPropertyOf ssso:has ,
+                           owl:topObjectProperty .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#isProvidedBy
+ssso:isProvidedBy rdf:type owl:ObjectProperty ;
+                  owl:inverseOf ssso:provides .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#isRequestedBy
+ssso:isRequestedBy rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf owl:topObjectProperty ;
+                   owl:inverseOf ssso:requests .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#isRequiredBy
+ssso:isRequiredBy rdf:type owl:ObjectProperty ;
+                  owl:inverseOf ssso:requires .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#provides
+ssso:provides rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#requests
+ssso:requests rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#requires
+ssso:requires rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf owl:topObjectProperty .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#hasClass
+ssso:hasClass rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#hasData
+ssso:hasData rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#hasDescription
+ssso:hasDescription rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#hasMetadata
+ssso:hasMetadata rdf:type owl:DatatypeProperty ;
+                 rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#hasName
+ssso:hasName rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#hasValue
+ssso:hasValue rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf owl:topDataProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#ARP_Attack
+ssso:ARP_Attack rdf:type owl:Class ;
+                rdfs:subClassOf ssso:Threat .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#AV
+ssso:AV rdf:type owl:Class ;
+        rdfs:subClassOf ssso:Equipment .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#Access_Policy
+ssso:Access_Policy rdf:type owl:Class ;
+                   rdfs:subClassOf ssso:Policy .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#Active_Malware
+ssso:Active_Malware rdf:type owl:Class ;
+                    rdfs:subClassOf ssso:Threat .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#Airflow_Setpoint_Control
+ssso:Airflow_Setpoint_Control rdf:type owl:Class ;
+                              rdfs:subClassOf ssso:Control .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#Airflow_Valve
+ssso:Airflow_Valve rdf:type owl:Class ;
+                   rdfs:subClassOf ssso:HVAC .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#Asset_Tracker
+ssso:Asset_Tracker rdf:type owl:Class ;
+                   rdfs:subClassOf ssso:SmartHome .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#Authentication
+ssso:Authentication rdf:type owl:Class ;
+                    rdfs:subClassOf ssso:Service .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#Brightness_Setpoint_Control
+ssso:Brightness_Setpoint_Control rdf:type owl:Class ;
+                                 rdfs:subClassOf ssso:Control .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#Broadcast_Bluetooth
+ssso:Broadcast_Bluetooth rdf:type owl:Class ;
+                         rdfs:subClassOf ssso:Data .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#Broadcast_Radio
+ssso:Broadcast_Radio rdf:type owl:Class ;
+                     rdfs:subClassOf ssso:Data .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#Broadcast_Wi-Fi
+ssso:Broadcast_Wi-Fi rdf:type owl:Class ;
+                     rdfs:subClassOf ssso:Data .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#Brute_Force_Attack
+ssso:Brute_Force_Attack rdf:type owl:Class ;
+                        rdfs:subClassOf ssso:Threat .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#Call
+ssso:Call rdf:type owl:Class ;
+          rdfs:subClassOf ssso:Data .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#Capture_Video
+ssso:Capture_Video rdf:type owl:Class ;
+                   rdfs:subClassOf ssso:Data .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#Certificate_Not_Matching
+ssso:Certificate_Not_Matching rdf:type owl:Class ;
+                              rdfs:subClassOf ssso:Threat .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#Classification_Level
+ssso:Classification_Level rdf:type owl:Class ;
+                          rdfs:subClassOf ssso:Policy .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#Close_Door
+ssso:Close_Door rdf:type owl:Class ;
+                rdfs:subClassOf ssso:Control .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#Close_Window
+ssso:Close_Window rdf:type owl:Class ;
+                  rdfs:subClassOf ssso:Control .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#Communication_Endpoint
+ssso:Communication_Endpoint rdf:type owl:Class ;
+                            rdfs:subClassOf ssso:Context .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#Connect_Internet
+ssso:Connect_Internet rdf:type owl:Class ;
+                      rdfs:subClassOf ssso:Data .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#Context
+ssso:Context rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#Control
+ssso:Control rdf:type owl:Class ;
+             rdfs:subClassOf ssso:Service .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#Count_Occupancy
+ssso:Count_Occupancy rdf:type owl:Class ;
+                     rdfs:subClassOf ssso:Sense .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#Credential_Not_Matching
+ssso:Credential_Not_Matching rdf:type owl:Class ;
+                             rdfs:subClassOf ssso:Threat .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#DDoS_Attack
+ssso:DDoS_Attack rdf:type owl:Class ;
+                 rdfs:subClassOf ssso:Threat .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#Data
+ssso:Data rdf:type owl:Class ;
+          rdfs:subClassOf ssso:Service .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#Detect_Brightness
+ssso:Detect_Brightness rdf:type owl:Class ;
+                       rdfs:subClassOf ssso:Sense .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#Detect_CO_Level
+ssso:Detect_CO_Level rdf:type owl:Class ;
+                     rdfs:subClassOf ssso:Sense .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#Detect_Data_Integrity
+ssso:Detect_Data_Integrity rdf:type owl:Class ;
+                           rdfs:subClassOf ssso:Sense .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#Detect_Face
+ssso:Detect_Face rdf:type owl:Class ;
+                 rdfs:subClassOf ssso:Sense .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#Detect_Fire
+ssso:Detect_Fire rdf:type owl:Class ;
+                 rdfs:subClassOf ssso:Sense .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#Detect_Hardware_Integrity
+ssso:Detect_Hardware_Integrity rdf:type owl:Class ;
+                               rdfs:subClassOf ssso:Sense .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#Detect_Infrared_Radiation
+ssso:Detect_Infrared_Radiation rdf:type owl:Class ;
+                               rdfs:subClassOf ssso:Sense .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#Detect_Motion
+ssso:Detect_Motion rdf:type owl:Class ;
+                   rdfs:subClassOf ssso:Sense .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#Detect_Occupancy
+ssso:Detect_Occupancy rdf:type owl:Class ;
+                      rdfs:subClassOf ssso:Sense .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#Detect_Radio_Frequency
+ssso:Detect_Radio_Frequency rdf:type owl:Class ;
+                            rdfs:subClassOf ssso:Sense .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#Detect_Smoke
+ssso:Detect_Smoke rdf:type owl:Class ;
+                  rdfs:subClassOf ssso:Sense .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#Detect_Sound
+ssso:Detect_Sound rdf:type owl:Class ;
+                  rdfs:subClassOf ssso:Sense .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#Dimmable_Light
+ssso:Dimmable_Light rdf:type owl:Class ;
+                    rdfs:subClassOf ssso:SmartHome .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#Dimmer_Setpoint_Control
+ssso:Dimmer_Setpoint_Control rdf:type owl:Class ;
+                             rdfs:subClassOf ssso:Control .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#Electromagnetic_Attack
+ssso:Electromagnetic_Attack rdf:type owl:Class ;
+                            rdfs:subClassOf ssso:Threat .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#Encryption_at_Rest
+ssso:Encryption_at_Rest rdf:type owl:Class ;
+                        rdfs:subClassOf ssso:Data .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#Encryption_in_Transit
+ssso:Encryption_in_Transit rdf:type owl:Class ;
+                           rdfs:subClassOf ssso:Data .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#Equipment
+ssso:Equipment rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#Equipment_Model
+ssso:Equipment_Model rdf:type owl:Class ;
+                     rdfs:subClassOf ssso:Model .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#Event
+ssso:Event rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#Expired_Certificate
+ssso:Expired_Certificate rdf:type owl:Class ;
+                         rdfs:subClassOf ssso:Threat .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#Expired_Credential
+ssso:Expired_Credential rdf:type owl:Class ;
+                        rdfs:subClassOf ssso:Threat .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#Face_Authentication
+ssso:Face_Authentication rdf:type owl:Class ;
+                         rdfs:subClassOf ssso:Authentication .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#Failed_Hardware_Integrity_Check
+ssso:Failed_Hardware_Integrity_Check rdf:type owl:Class ;
+                                     rdfs:subClassOf ssso:Threat .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#File_Server
+ssso:File_Server rdf:type owl:Class ;
+                 rdfs:subClassOf ssso:Network .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#Fingerprint_Authentication
+ssso:Fingerprint_Authentication rdf:type owl:Class ;
+                                rdfs:subClassOf ssso:Authentication .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#Fire_Damper
+ssso:Fire_Damper rdf:type owl:Class ;
+                 rdfs:subClassOf ssso:HVAC .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#Group
+ssso:Group rdf:type owl:Class ;
+           rdfs:subClassOf ssso:Context .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#HTTP
+ssso:HTTP rdf:type owl:Class ;
+          rdfs:subClassOf ssso:Communication_Endpoint .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#HVAC
+ssso:HVAC rdf:type owl:Class ;
+          rdfs:subClassOf ssso:Equipment .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#Inaccessible_MAPE-k_Engine
+ssso:Inaccessible_MAPE-k_Engine rdf:type owl:Class ;
+                                rdfs:subClassOf ssso:Threat .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#IoT_Gateway
+ssso:IoT_Gateway rdf:type owl:Class ;
+                 rdfs:subClassOf ssso:Network .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#Iris_Authentication
+ssso:Iris_Authentication rdf:type owl:Class ;
+                         rdfs:subClassOf ssso:Authentication .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#Landline_Phone
+ssso:Landline_Phone rdf:type owl:Class ;
+                    rdfs:subClassOf ssso:Telecommunication .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#Live_Streaming_Server
+ssso:Live_Streaming_Server rdf:type owl:Class ;
+                           rdfs:subClassOf ssso:Network .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#Location
+ssso:Location rdf:type owl:Class ;
+              rdfs:subClassOf ssso:Context .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#Lock
+ssso:Lock rdf:type owl:Class ;
+          rdfs:subClassOf ssso:Equipment .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#MQTT
+ssso:MQTT rdf:type owl:Class ;
+          rdfs:subClassOf ssso:Communication_Endpoint .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#Measure_Acceleration
+ssso:Measure_Acceleration rdf:type owl:Class ;
+                          rdfs:subClassOf ssso:Sense .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#Measure_Distance
+ssso:Measure_Distance rdf:type owl:Class ;
+                      rdfs:subClassOf ssso:Sense .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#Measure_Humidity
+ssso:Measure_Humidity rdf:type owl:Class ;
+                      rdfs:subClassOf ssso:Sense .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#Measure_Magnetism
+ssso:Measure_Magnetism rdf:type owl:Class ;
+                       rdfs:subClassOf ssso:Sense .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#Measure_Temperature
+ssso:Measure_Temperature rdf:type owl:Class ;
+                         rdfs:subClassOf ssso:Sense .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#Measure_Wind_Speed
+ssso:Measure_Wind_Speed rdf:type owl:Class ;
+                        rdfs:subClassOf ssso:Sense .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#Metadata
+ssso:Metadata rdf:type owl:Class ;
+              rdfs:subClassOf ssso:Context .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#Miscellaneous
+ssso:Miscellaneous rdf:type owl:Class ;
+                   rdfs:subClassOf ssso:Context .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#Missing_Asset
+ssso:Missing_Asset rdf:type owl:Class ;
+                   rdfs:subClassOf ssso:Threat .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#Model
+ssso:Model rdf:type owl:Class ;
+           rdfs:subClassOf ssso:Context .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#NFC_Authentication
+ssso:NFC_Authentication rdf:type owl:Class ;
+                        rdfs:subClassOf ssso:Authentication .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#Network
+ssso:Network rdf:type owl:Class ;
+             rdfs:subClassOf ssso:Equipment .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#Network_Camera
+ssso:Network_Camera rdf:type owl:Class ;
+                    rdfs:subClassOf ssso:AV .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#OAuth_Authentication
+ssso:OAuth_Authentication rdf:type owl:Class ;
+                          rdfs:subClassOf ssso:Authentication .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#OTP_Authentication
+ssso:OTP_Authentication rdf:type owl:Class ;
+                        rdfs:subClassOf ssso:Authentication .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#Open_Door
+ssso:Open_Door rdf:type owl:Class ;
+               rdfs:subClassOf ssso:Control .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#Open_Window
+ssso:Open_Window rdf:type owl:Class ;
+                 rdfs:subClassOf ssso:Control .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#Password_Authentication
+ssso:Password_Authentication rdf:type owl:Class ;
+                             rdfs:subClassOf ssso:Authentication .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#Play_Audio
+ssso:Play_Audio rdf:type owl:Class ;
+                rdfs:subClassOf ssso:Data .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#Play_Video
+ssso:Play_Video rdf:type owl:Class ;
+                rdfs:subClassOf ssso:Data .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#Point
+ssso:Point rdf:type owl:Class ;
+           rdfs:subClassOf ssso:Event .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#Policy
+ssso:Policy rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#Projector
+ssso:Projector rdf:type owl:Class ;
+               rdfs:subClassOf ssso:AV .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#RFID_Door_Lock
+ssso:RFID_Door_Lock rdf:type owl:Class ;
+                    rdfs:subClassOf ssso:Lock .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#RPC
+ssso:RPC rdf:type owl:Class ;
+         rdfs:subClassOf ssso:Communication_Endpoint .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#Record_Audio
+ssso:Record_Audio rdf:type owl:Class ;
+                  rdfs:subClassOf ssso:Data .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#Request
+ssso:Request rdf:type owl:Class ;
+             rdfs:subClassOf ssso:Event .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#Request_Model
+ssso:Request_Model rdf:type owl:Class ;
+                   rdfs:subClassOf ssso:Model .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#Room_Temperature_Setpoint_Control
+ssso:Room_Temperature_Setpoint_Control rdf:type owl:Class ;
+                                       rdfs:subClassOf ssso:Control .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#Router
+ssso:Router rdf:type owl:Class ;
+            rdfs:subClassOf ssso:Network .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#SDR_Transceiver
+ssso:SDR_Transceiver rdf:type owl:Class ;
+                     rdfs:subClassOf ssso:Telecommunication .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#Safe_Box_Lock
+ssso:Safe_Box_Lock rdf:type owl:Class ;
+                   rdfs:subClassOf ssso:Lock .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#Security_Assessment_Policy
+ssso:Security_Assessment_Policy rdf:type owl:Class ;
+                                rdfs:subClassOf ssso:Policy .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#Security_Level
+ssso:Security_Level rdf:type owl:Class ;
+                    rdfs:subClassOf ssso:Policy .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#Sense
+ssso:Sense rdf:type owl:Class ;
+           rdfs:subClassOf ssso:Service .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#Service
+ssso:Service rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#Share_Data
+ssso:Share_Data rdf:type owl:Class ;
+                rdfs:subClassOf ssso:Data .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#Share_Screen
+ssso:Share_Screen rdf:type owl:Class ;
+                  rdfs:subClassOf ssso:Data .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#Simple_Password
+ssso:Simple_Password rdf:type owl:Class ;
+                     rdfs:subClassOf ssso:Threat .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#SmartHome
+ssso:SmartHome rdf:type owl:Class ;
+               rdfs:subClassOf ssso:Equipment .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#Smart_Board
+ssso:Smart_Board rdf:type owl:Class ;
+                 rdfs:subClassOf ssso:AV .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#Smart_Card_Authentication
+ssso:Smart_Card_Authentication rdf:type owl:Class ;
+                               rdfs:subClassOf ssso:Authentication .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#Smart_Card_Reader
+ssso:Smart_Card_Reader rdf:type owl:Class ;
+                       rdfs:subClassOf ssso:Lock .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#Smart_Clock
+ssso:Smart_Clock rdf:type owl:Class ;
+                 rdfs:subClassOf ssso:SmartHome .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#Smart_Door_Lock
+ssso:Smart_Door_Lock rdf:type owl:Class ;
+                     rdfs:subClassOf ssso:Lock .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#Smart_Key_Lock
+ssso:Smart_Key_Lock rdf:type owl:Class ;
+                    rdfs:subClassOf ssso:Lock .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#Smart_Phone
+ssso:Smart_Phone rdf:type owl:Class ;
+                 rdfs:subClassOf ssso:Telecommunication .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#Smart_Speaker
+ssso:Smart_Speaker rdf:type owl:Class ;
+                   rdfs:subClassOf ssso:AV .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#Smart_Sweeper
+ssso:Smart_Sweeper rdf:type owl:Class ;
+                   rdfs:subClassOf ssso:SmartHome .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#Smart_TV
+ssso:Smart_TV rdf:type owl:Class ;
+              rdfs:subClassOf ssso:AV .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#Smoke_Detector
+ssso:Smoke_Detector rdf:type owl:Class ;
+                    rdfs:subClassOf ssso:HVAC .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#Sniffing_Attack
+ssso:Sniffing_Attack rdf:type owl:Class ;
+                     rdfs:subClassOf ssso:Threat .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#Status
+ssso:Status rdf:type owl:Class ;
+            rdfs:subClassOf ssso:Context .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#Stolen_Credential
+ssso:Stolen_Credential rdf:type owl:Class ;
+                       rdfs:subClassOf ssso:Threat .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#Store_Data
+ssso:Store_Data rdf:type owl:Class ;
+                rdfs:subClassOf ssso:Data .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#Stream_Media
+ssso:Stream_Media rdf:type owl:Class ;
+                  rdfs:subClassOf ssso:Data .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#Tablet
+ssso:Tablet rdf:type owl:Class ;
+            rdfs:subClassOf ssso:Telecommunication .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#Take_Photo
+ssso:Take_Photo rdf:type owl:Class ;
+                rdfs:subClassOf ssso:Data .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#Take_Screenshot
+ssso:Take_Screenshot rdf:type owl:Class ;
+                     rdfs:subClassOf ssso:Data .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#Telecommunication
+ssso:Telecommunication rdf:type owl:Class ;
+                       rdfs:subClassOf ssso:Equipment .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#Temperature_Sensor
+ssso:Temperature_Sensor rdf:type owl:Class ;
+                        rdfs:subClassOf ssso:HVAC .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#Thermostat
+ssso:Thermostat rdf:type owl:Class ;
+                rdfs:subClassOf ssso:HVAC .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#Threat
+ssso:Threat rdf:type owl:Class ;
+            rdfs:subClassOf ssso:Event .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#Threat_Assessment_Policy
+ssso:Threat_Assessment_Policy rdf:type owl:Class ;
+                              rdfs:subClassOf ssso:Policy .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#Threat_Level
+ssso:Threat_Level rdf:type owl:Class ;
+                  rdfs:subClassOf ssso:Policy .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#Threat_Mitigation_Policy
+ssso:Threat_Mitigation_Policy rdf:type owl:Class ;
+                              rdfs:subClassOf ssso:Policy .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#Threat_Model
+ssso:Threat_Model rdf:type owl:Class ;
+                  rdfs:subClassOf ssso:Model .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#Token_Authentication
+ssso:Token_Authentication rdf:type owl:Class ;
+                          rdfs:subClassOf ssso:Authentication .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#Track_Location
+ssso:Track_Location rdf:type owl:Class ;
+                    rdfs:subClassOf ssso:Sense .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#Trust_Level_Assessment_Policy
+ssso:Trust_Level_Assessment_Policy rdf:type owl:Class ;
+                                   rdfs:subClassOf ssso:Policy .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#Turn_off
+ssso:Turn_off rdf:type owl:Class ;
+              rdfs:subClassOf ssso:Control .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#Turn_on
+ssso:Turn_on rdf:type owl:Class ;
+             rdfs:subClassOf ssso:Control .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#Unauthorized_Access
+ssso:Unauthorized_Access rdf:type owl:Class ;
+                         rdfs:subClassOf ssso:Threat .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#Unauthorized_Action
+ssso:Unauthorized_Action rdf:type owl:Class ;
+                         rdfs:subClassOf ssso:Threat .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#Unauthorized_Location
+ssso:Unauthorized_Location rdf:type owl:Class ;
+                           rdfs:subClassOf ssso:Threat .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#Unauthorized_Running_Service
+ssso:Unauthorized_Running_Service rdf:type owl:Class ;
+                                  rdfs:subClassOf ssso:Threat .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#Unauthorized_User
+ssso:Unauthorized_User rdf:type owl:Class ;
+                       rdfs:subClassOf ssso:Threat .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#Unexpected_Device_Connection
+ssso:Unexpected_Device_Connection rdf:type owl:Class ;
+                                  rdfs:subClassOf ssso:Threat .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#Unexpected_Door_Open
+ssso:Unexpected_Door_Open rdf:type owl:Class ;
+                          rdfs:subClassOf ssso:Threat .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#Unexpected_Motion
+ssso:Unexpected_Motion rdf:type owl:Class ;
+                       rdfs:subClassOf ssso:Threat .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#Unexpected_Occupancy
+ssso:Unexpected_Occupancy rdf:type owl:Class ;
+                          rdfs:subClassOf ssso:Threat .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#Unexpected_Privilege_Escalation
+ssso:Unexpected_Privilege_Escalation rdf:type owl:Class ;
+                                     rdfs:subClassOf ssso:Threat .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#Unexpected_Window_Open
+ssso:Unexpected_Window_Open rdf:type owl:Class ;
+                            rdfs:subClassOf ssso:Threat .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#Unrecognized_Face
+ssso:Unrecognized_Face rdf:type owl:Class ;
+                       rdfs:subClassOf ssso:Threat .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#Unrecognized_File
+ssso:Unrecognized_File rdf:type owl:Class ;
+                       rdfs:subClassOf ssso:Threat .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#Unrecognized_Radio_Frequency
+ssso:Unrecognized_Radio_Frequency rdf:type owl:Class ;
+                                  rdfs:subClassOf ssso:Threat .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#User
+ssso:User rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#Variable
+ssso:Variable rdf:type owl:Class ;
+              rdfs:subClassOf ssso:Context .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#Video_Call
+ssso:Video_Call rdf:type owl:Class ;
+                rdfs:subClassOf ssso:Data .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#Virtual_Private_Network_Server
+ssso:Virtual_Private_Network_Server rdf:type owl:Class ;
+                                    rdfs:subClassOf ssso:Data .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#VoIP_Gateway
+ssso:VoIP_Gateway rdf:type owl:Class ;
+                  rdfs:subClassOf ssso:Network .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#VoIP_Phone
+ssso:VoIP_Phone rdf:type owl:Class ;
+                rdfs:subClassOf ssso:Telecommunication .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#Voice_Authentication
+ssso:Voice_Authentication rdf:type owl:Class ;
+                          rdfs:subClassOf ssso:Authentication .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#Window_Sensor
+ssso:Window_Sensor rdf:type owl:Class ;
+                   rdfs:subClassOf ssso:SmartHome .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#Wiretapping_Attack
+ssso:Wiretapping_Attack rdf:type owl:Class ;
+                        rdfs:subClassOf ssso:Threat .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#Active
+ssso:Active rdf:type owl:NamedIndividual ,
+                     ssso:Status .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#Classified
+ssso:Classified rdf:type owl:NamedIndividual ,
+                         ssso:Classification_Level .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#Inactive
+ssso:Inactive rdf:type owl:NamedIndividual ,
+                       ssso:Status .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#Normal
+ssso:Normal rdf:type owl:NamedIndividual ,
+                     ssso:Classification_Level .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#Public
+ssso:Public rdf:type owl:NamedIndividual ,
+                     ssso:Classification_Level .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#SL-0
+ssso:SL-0 rdf:type owl:NamedIndividual ,
+                   ssso:Security_Level .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#SL-1
+ssso:SL-1 rdf:type owl:NamedIndividual ,
+                   ssso:Security_Level .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#SL-2
+ssso:SL-2 rdf:type owl:NamedIndividual ,
+                   ssso:Security_Level .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#SL-3
+ssso:SL-3 rdf:type owl:NamedIndividual ,
+                   ssso:Security_Level .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#SL-4
+ssso:SL-4 rdf:type owl:NamedIndividual ,
+                   ssso:Security_Level .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#Suspended
+ssso:Suspended rdf:type owl:NamedIndividual ,
+                        ssso:Status .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#TL-0
+ssso:TL-0 rdf:type owl:NamedIndividual ,
+                   ssso:Threat_Level .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#TL-1
+ssso:TL-1 rdf:type owl:NamedIndividual ,
+                   ssso:Threat_Level .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#TL-2
+ssso:TL-2 rdf:type owl:NamedIndividual ,
+                   ssso:Threat_Level .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#TL-3
+ssso:TL-3 rdf:type owl:NamedIndividual ,
+                   ssso:Threat_Level .
+
+
+###  http://www.semanticweb.org/linch/ontologies/2018/11/ssso#TL-4
+ssso:TL-4 rdf:type owl:NamedIndividual ,
+                   ssso:Threat_Level .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( ssso:ARP_Attack
+                ssso:Active_Malware
+                ssso:Brute_Force_Attack
+                ssso:Certificate_Not_Matching
+                ssso:Credential_Not_Matching
+                ssso:DDoS_Attack
+                ssso:Electromagnetic_Attack
+                ssso:Expired_Certificate
+                ssso:Expired_Credential
+                ssso:Failed_Hardware_Integrity_Check
+                ssso:Inaccessible_MAPE-k_Engine
+                ssso:Missing_Asset
+                ssso:Simple_Password
+                ssso:Sniffing_Attack
+                ssso:Stolen_Credential
+                ssso:Unauthorized_Access
+                ssso:Unauthorized_Action
+                ssso:Unauthorized_Location
+                ssso:Unauthorized_Running_Service
+                ssso:Unauthorized_User
+                ssso:Unexpected_Device_Connection
+                ssso:Unexpected_Door_Open
+                ssso:Unexpected_Motion
+                ssso:Unexpected_Occupancy
+                ssso:Unexpected_Privilege_Escalation
+                ssso:Unexpected_Window_Open
+                ssso:Unrecognized_Face
+                ssso:Unrecognized_File
+                ssso:Unrecognized_Radio_Frequency
+                ssso:Wiretapping_Attack
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( ssso:Airflow_Setpoint_Control
+                ssso:Brightness_Setpoint_Control
+                ssso:Close_Door
+                ssso:Close_Window
+                ssso:Dimmer_Setpoint_Control
+                ssso:Open_Door
+                ssso:Open_Window
+                ssso:Room_Temperature_Setpoint_Control
+                ssso:Turn_off
+                ssso:Turn_on
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( ssso:Airflow_Valve
+                ssso:Fire_Damper
+                ssso:Smoke_Detector
+                ssso:Temperature_Sensor
+                ssso:Thermostat
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( ssso:Asset_Tracker
+                ssso:Dimmable_Light
+                ssso:Smart_Clock
+                ssso:Smart_Sweeper
+                ssso:Window_Sensor
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( ssso:Broadcast_Bluetooth
+                ssso:Broadcast_Radio
+                ssso:Broadcast_Wi-Fi
+                ssso:Call
+                ssso:Capture_Video
+                ssso:Connect_Internet
+                ssso:Encryption_at_Rest
+                ssso:Encryption_in_Transit
+                ssso:Play_Audio
+                ssso:Play_Video
+                ssso:Record_Audio
+                ssso:Share_Data
+                ssso:Share_Screen
+                ssso:Store_Data
+                ssso:Stream_Media
+                ssso:Take_Photo
+                ssso:Take_Screenshot
+                ssso:Video_Call
+                ssso:Virtual_Private_Network_Server
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( ssso:Detect_Brightness
+                ssso:Detect_CO_Level
+                ssso:Detect_Data_Integrity
+                ssso:Detect_Face
+                ssso:Detect_Fire
+                ssso:Detect_Hardware_Integrity
+                ssso:Detect_Infrared_Radiation
+                ssso:Detect_Motion
+                ssso:Detect_Occupancy
+                ssso:Detect_Radio_Frequency
+                ssso:Detect_Smoke
+                ssso:Detect_Sound
+                ssso:Measure_Acceleration
+                ssso:Measure_Distance
+                ssso:Measure_Humidity
+                ssso:Measure_Magnetism
+                ssso:Measure_Temperature
+                ssso:Measure_Wind_Speed
+                ssso:Track_Location
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( ssso:Face_Authentication
+                ssso:Fingerprint_Authentication
+                ssso:Iris_Authentication
+                ssso:NFC_Authentication
+                ssso:OAuth_Authentication
+                ssso:OTP_Authentication
+                ssso:Password_Authentication
+                ssso:Smart_Card_Authentication
+                ssso:Token_Authentication
+                ssso:Voice_Authentication
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( ssso:File_Server
+                ssso:IoT_Gateway
+                ssso:Live_Streaming_Server
+                ssso:Router
+                ssso:VoIP_Gateway
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( ssso:Landline_Phone
+                ssso:SDR_Transceiver
+                ssso:Smart_Phone
+                ssso:Tablet
+                ssso:VoIP_Phone
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( ssso:Network_Camera
+                ssso:Projector
+                ssso:Smart_Board
+                ssso:Smart_Speaker
+                ssso:Smart_TV
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( ssso:RFID_Door_Lock
+                ssso:Safe_Box_Lock
+                ssso:Smart_Card_Reader
+                ssso:Smart_Door_Lock
+                ssso:Smart_Key_Lock
+              )
+] .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
