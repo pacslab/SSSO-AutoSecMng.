@@ -21,6 +21,7 @@ class Equipment(object):
         """
         bulk_updates = []
         svc_bulk_updates =[]
+        context = {} if context is None else context
         if type(equipmentModel) == str:
             equipmentModel = self.ontology.query_data(object=equipmentModel, object_class='Equipment_Model')
             if equipmentModel == []:
@@ -709,27 +710,3 @@ class Manager(object):
         self.policy = Policy(self.ontology)
         self.context = Context(self.ontology)
         self.user = User(self.ontology)
-
-if __name__ == '__main__':
-    manager = Manager('ssso_v1.ttl')
-    manager = Manager('ssso_large_scale.ttl')
-    with open('../EQM_Projector_ModelA.json') as json_file:
-        SmartBoard_EQM = json.load(json_file)
-    with open('../equipment_context.json') as json_file:
-        SmartBoard_Context = json.load(json_file)
-    #print(manager.equipment.create(equipmentModel=SmartBoard_EQM, context=SmartBoard_Context))
-    #print(manager.equipment.create(equipmentModel='ae137288-3782-432d-8d83-d5cee733fe4b', context=SmartBoard_Context))
-    # for i in range(4807):
-    #     manager.equipment.create(equipmentModel='ae137288-3782-432d-8d83-d5cee733fe4b', context=SmartBoard_Context)
-    #     print(i)
-    #manager.equipment.remove('bce83c7b-cf46-4495-9bad-e057b8a39aeb')
-    #equipment.remove('326e7adf-＃41ef-44c8-9071-6＃50af3554c0c')
-    import time
-    startT = time.time()
-    print(manager.service.enable('85c72518-c304-463f-b925-d2cb1cf54791', 'user1'))
-    endT = time.time()
-    print(endT-startT)
-    #print(manager.event.report_threat('f25d6fab-a140-42eb-b31b-3b9d94e96b19', 'Unexpected_Occupancy'))
-    #print(manager.event.remove_threat('85098e99-ea6e-4be3-9476-eb0d6d6ef040'))
-    #print(manager.service.disable('85c72518-c304-463f-b925-d2cb1cf54791'))
-

@@ -2,7 +2,6 @@ from rdflib import RDFS, RDF, Namespace, Graph, URIRef, Literal, XSD
 import rdflib
 import numpy as np
 import json
-import requests
 from SPARQLWrapper import SPARQLWrapper, JSON, POST, DIGEST, BASIC
 
 class sssontology(object):
