@@ -1,5 +1,28 @@
 # SSSO-AutoSecMng
 The reproducible artifact repository for the paper "Autonomic Security Management for IoT Smart Spaces."
+## Citation
+The paper is available [here](https://pacs.eecs.yorku.ca/pubs/pdf/lin2021autonomic.pdf).
+
+BibTex
+
+```
+@article{10.1145/3466696,
+author = {Lin, Changyuan and Khazaei, Hamzeh and Walenstein, Andrew and Malton, Andrew},
+title = {Autonomic Security Management for IoT Smart Spaces},
+year = {2021},
+issue_date = {November 2021},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {2},
+number = {4},
+issn = {2691-1914},
+doi = {10.1145/3466696},
+month = aug,
+articleno = {27},
+}
+
+```
+
 ## Overview of the methodology
 ### Autonomic Security Management
 ![alt text](docs/autonomic-security-manager.png "Overview of the architecture of the proposed autonomic security manager. There are four layers in the system, namely Resource and Context, Triple Store, Manager, and Interface, marked in different colors. Interactions between layers are shown on the right.")
