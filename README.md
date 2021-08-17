@@ -6,7 +6,7 @@ The paper is available [here](https://pacs.eecs.yorku.ca/pubs/pdf/lin2021autonom
 BibTex
 
 ```
-@article{10.1145/3466696,
+@article{LinAutoSecMng2021,
 author = {Lin, Changyuan and Khazaei, Hamzeh and Walenstein, Andrew and Malton, Andrew},
 title = {Autonomic Security Management for IoT Smart Spaces},
 year = {2021},
